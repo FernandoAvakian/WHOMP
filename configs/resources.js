@@ -400,8 +400,8 @@ export default {
             fr: 'Blanchiment projeté des coraux',
           },
           sublabel: {
-            en: '(onset year of annual events under the RCP 4.5 scenario)',
-            fr: '(année d’apparition des événements annuels dans le cadre du scénario RCP 4.5)',
+            en: '(onset year of annual events under the RCP 8.5 scenario)',
+            fr: '(année d’apparition des événements annuels dans le cadre du scénario RCP 8.5)',
           },
         },
       ],

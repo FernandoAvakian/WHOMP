@@ -2,7 +2,7 @@ export default {
   fr: {
     imagery: [
       'Imagerie récente',
-      'Imagerie satellitaire haute résolution récente'
+      'Imagerie satellitaire moyenne résolution récente'
     ],
     acquisition: 'Date d’acquisition',
     date: 'Date',
@@ -136,7 +136,7 @@ export default {
     imageStyleOptions: [{ label: `自然色` }, { label: `植被健康状况` }]
   },
   en: {
-    imagery: ['Recent Imagery', 'Recent Hi-Res Satellite Imagery'],
+    imagery: ['Recent Imagery', 'Recent Mid-Res Satellite Imagery'],
     acquisition: 'Acquisition Date',
     date: 'Date',
     naturalColor: 'Natural Color',

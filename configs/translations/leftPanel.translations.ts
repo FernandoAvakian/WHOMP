@@ -435,7 +435,7 @@ export const layersPanelTranslations = {
     tabTitle: '1. Visualizer',
     layers: 'Couches',
     description:
-      'Sélectionnez des ensembles de données de différentes catégories que vous souhaitez visualiser sur la carte. Les métadonnées et un guide d'interprétation des couches sont également disponibles <a href="https://whc.unesco.org/uploads/activities/documents/activity-1142-20.pdf">ici</a>.',
+      'Sélectionnez des ensembles de données de différentes catégories que vous souhaitez visualiser sur la carte. Les métadonnées et un guide d\'interprétation des couches sont également disponibles <a href="https://whc.unesco.org/uploads/activities/documents/activity-1142-20.pdf">ici</a>.',
     selectAll: 'Tout sélectionner',
     clearAll: 'Tout effacer',
     legend: 'Légende',

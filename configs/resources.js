@@ -181,8 +181,8 @@ export default {
           layerType: 'base-tile-layer',
           uuid: '1a08810f-34a4-4c53-8a37-6782d0ab6dec',
           label: {
-            en: 'Air Quality',
-            fr: 'Qualité de l’air',
+            en: 'Air Quality (next-day forecast)',
+            fr: 'Qualité de l’air (prévision)',
           },
           sublabel: {
             en: 'Forecasted PM2.5 (µg/m3)',
@@ -280,7 +280,7 @@ export default {
           uuid: '90992233-36d7-45f9-97db-0ccf28275285',
           label: {
             en: 'Projected Change in Water Stress by 2030',
-            fr: 'Stress hydrique projeté',
+            fr: 'Stress hydrique projeté (2030)',
           },
           sublabel: {
             en: '(business as usual scenario)',

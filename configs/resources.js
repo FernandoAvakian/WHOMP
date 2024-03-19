@@ -72,7 +72,7 @@ export default {
   disabledAnalysisModules: [], //'VIIRS_FIRES', 'GLAD_ALERTS', 'TC_LOSS', 'IFL', 'LCC'
   // layers added in Arcgis Online, map id layer with the group id
   webmapLayerGroupsMap: {
-    '18c59090835-layer-73': 'GROUP_CUSTOM_BASEMAP',
+    '18c59090835-layer-73': 'GROUP_CLIMATE',
     '18c590868ad-layer-72': 'GROUP_CUSTOM_BASEMAP',
     '18c5907c5ac-layer-71': 'GROUP_CUSTOM_BASEMAP',
     '18c5906db15-layer-70': 'GROUP_CUSTOM_BASEMAP',
@@ -553,7 +553,7 @@ export default {
     //   ],
     // },
     GROUP_CUSTOM_BASEMAP: {
-      order: 9,
+      order: 11,
       groupType: 'default',
       label: {
         en: 'Basemap',

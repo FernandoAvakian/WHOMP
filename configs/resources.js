@@ -553,7 +553,7 @@ export default {
     //   ],
     // },
     GROUP_CUSTOM_BASEMAP: {
-      order: 10,
+      order: 11,
       groupType: 'default',
       label: {
         en: 'Basemap',

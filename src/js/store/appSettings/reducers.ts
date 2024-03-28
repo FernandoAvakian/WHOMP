@@ -2,7 +2,7 @@ import { AppSettings, AppSettingsTypes, OVERWRITE_SETTINGS, OVERWRITE_COLOR_THEM
 
 const initialState: AppSettings = {
   webmap: '512eef95997b4e7486cdbdc45078739d',
-  title: 'World Heritage Online Maps Platform',
+  title: 'World Heritage Online Map Platform',
   subtitle: '',
   logoUrl: 'https://my.gfw-mapbuilder.org/img/gfw-logo.png',
   logoLinkUrl: 'https://developers.globalforestwatch.org/map-builder/',

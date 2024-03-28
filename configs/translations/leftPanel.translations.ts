@@ -584,7 +584,7 @@ export const dataTabConfig = {
     header: 'Select a shape on the map',
     instructionsList: [
       'Use the Visualize tab to turn on a data layer',
-      'Double click on the data layer to run an analysis in the Analyze tab',
+      'Select or draw a polygon to run an analysis in the "Analyze" tab',
       'If there are overlapping data layers, use Prev/Next buttons to select the data layer to run an analysis in the Analyze tab',
     ],
   },
@@ -614,8 +614,9 @@ export const dataTabConfig = {
     tabTitle: '2. Selectionner les donnes',
     header: 'Sélectionnez un polygone sur la carte',
     instructionsList: [
-      "Utiliser l'onglet Couches pour activer une couche de données",
-      'Sélectionnez un polygone sur la carte',
+      "Utilisez l'onglet Couches pour activer une couche de données",
+      "Sélectionnez ou dessinez un polygone pour effectuer une analyse dans l'onglet Analyser",
+      "Si les couches de données se chevauchent, utilisez les boutons Précédent/Suivant pour sélectionner la couche de données à analyser dans l'onglet Analyser",
     ],
   },
   es: {

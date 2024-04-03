@@ -330,7 +330,7 @@ export default {
     },
     GROUP_CLIMATE: {
       groupType: 'default',
-      order: 5,
+      order: 10,
       label: {
         en: 'Climate',
         fr: 'Climat',
@@ -553,7 +553,7 @@ export default {
     //   ],
     // },
     GROUP_CUSTOM_BASEMAP: {
-      order: 10,
+      order: 5,
       groupType: 'default',
       label: {
         en: 'Basemap',

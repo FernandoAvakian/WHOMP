@@ -251,7 +251,7 @@ export default {
           id: 'UMD_LAND_COVER',
           order: 9,
           type: 'remoteDataLayer',
-          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89"
+          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
         },
         {
           id: 'WATER_STRESS_CUSTOM',

@@ -248,6 +248,12 @@ export default {
           },
         },
         {
+          id: 'UMD_LAND_COVER',
+          order: 9,
+          type: 'remoteDataLayer',
+          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89"
+        },
+        {
           id: 'WATER_STRESS_CUSTOM',
           groupId: 'GROUP_SOCIOECONOMIC',
           order: 9,
@@ -387,9 +393,15 @@ export default {
           uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
         },
         {
+          id: 'CARBON_SEQ',
+          order: 9,
+          type: 'remoteDataLayer',
+          uuid: 'e7208398-0acd-4f73-a824-c4fe1e356e0c'
+        },
+        {
           id: 'CORAL_BLEACHING_RISK_CUSTOM',
           groupId: 'GROUP_CLIMATE',
-          order: 9,
+          order: 10,
           type: 'flagship',
           origin: 'gfw-api',
           layerType: 'base-tile-layer',

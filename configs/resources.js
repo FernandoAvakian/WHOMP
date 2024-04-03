@@ -381,6 +381,12 @@ export default {
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
         },
         {
+          id: 'FOREST_CARBON_GROSS_REMOVALS',
+          order: 10,
+          type: 'remoteDataLayer',
+          uuid: '79010c83-e62e-4744-96ed-130736daa651'
+        },
+        {
           id: 'FOREST_CARBON_NET_FLUX',
           order: 8,
           type: 'remoteDataLayer',

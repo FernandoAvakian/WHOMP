@@ -246,9 +246,6 @@ export default {
           order: 10,
           type: 'remoteDataLayer',
           uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
-          label: {
-            en: 'Gross Domestic Product (GDP)',
-            fr: 'Produit intérieur brut (PIB)',
           },
         },
         {

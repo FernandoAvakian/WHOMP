@@ -243,12 +243,12 @@ export default {
         },
         {
           id: 'UMD_LAND_COVER',
-          order: 9,
+          order: 10,
           type: 'remoteDataLayer',
           uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
           label: {
-            en: 'Land cover change 2000-2020',
-            fr: 'Changement de la couverture terrestre 2000-2020',
+            en: 'Gross Domestic Product (GDP)',
+            fr: 'Produit intérieur brut (PIB)',
           },
         {
           id: 'WATER_STRESS_CUSTOM',
@@ -265,7 +265,7 @@ export default {
         },
         {
           id: 'WIND_SPEED',
-          order: 10,
+          order: 11,
           type: 'remoteDataLayer',
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
           label: {

@@ -290,7 +290,7 @@ export default {
         {
           id: 'RIVERINE_FLOOD_RISK_CUSTOM',
           groupId: 'GROUP_THREATS_AND_RISKS',
-          order: 9,
+          order: 10,
           type: 'flagship',
           origin: 'gfw-api',
           layerType: 'base-tile-layer',
@@ -303,7 +303,7 @@ export default {
         {
           id: 'DROUGHT_RISK_CUSTOM',
           groupId: 'GROUP_THREATS_AND_RISKS',
-          order: 9,
+          order: 11,
           type: 'flagship',
           origin: 'gfw-api',
           layerType: 'base-tile-layer',
@@ -316,7 +316,7 @@ export default {
         {
           id: 'COASTAL_FLOOD_RISK_STRESS_CUSTOM',
           groupId: 'GROUP_THREATS_AND_RISKS',
-          order: 9,
+          order: 12,
           type: 'flagship',
           origin: 'gfw-api',
           layerType: 'base-tile-layer',
@@ -330,7 +330,7 @@ export default {
     },
     GROUP_CLIMATE: {
       groupType: 'default',
-      order: 10,
+      order: 5,
       label: {
         en: 'Climate',
         fr: 'Climat',
@@ -553,7 +553,7 @@ export default {
     //   ],
     // },
     GROUP_CUSTOM_BASEMAP: {
-      order: 5,
+      order: 10,
       groupType: 'default',
       label: {
         en: 'Basemap',

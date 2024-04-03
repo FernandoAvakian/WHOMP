@@ -381,16 +381,6 @@ export default {
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
         },
         {
-          id: 'FISHING',
-          order: 10,
-          type: 'feature',
-          label: {
-            en: 'Tracked fishing activity'
-            fr: 'Activité de pêche'
-          }
-          url: https://gateway.api.globalfishingwatch.org/v3/4wings/report?spatial-resolution=HIGH&temporal-resolution=YEARLY&group-by=GEARTYPE&datasets[0]=public-global-fishing-effort%3Alatest&date-range=2022-01-01%2C2022-12-31&format=TIF&filters[0]=geartype%20in%20%28%27trawlers%27%29'
-        },
-        {
           id: 'FOREST_CARBON_NET_FLUX',
           order: 8,
           type: 'remoteDataLayer',

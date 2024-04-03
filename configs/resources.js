@@ -246,7 +246,7 @@ export default {
           order: 10,
           type: 'remoteDataLayer',
           uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
-          },
+        },
         },
         {
           id: 'WATER_STRESS_CUSTOM',
@@ -266,10 +266,6 @@ export default {
           order: 11,
           type: 'remoteDataLayer',
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
-          label: {
-            en: 'Wind Speed Potential at 50m (m/s)',
-            fr: 'Vitesse potentielle du vent à 50 m (m/s)',
-          },
         },
       ],
     },

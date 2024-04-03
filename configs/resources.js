@@ -209,12 +209,6 @@ export default {
       },
       layers: [
         {
-          id: 'LAND_COVER',
-          order: 0,
-          type: 'remoteDataLayer',
-          uuid: 'b8d3f175-0565-443f-839a-49eb890a4b3d',
-        },
-        {
           id: 'TREE_COVER',
           order: 1,
           type: 'remoteDataLayer',
@@ -252,6 +246,9 @@ export default {
           order: 9,
           type: 'remoteDataLayer',
           uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
+          label: {
+            en: 'Land cover change 2000-2020',
+            fr: 'Changement de la couverture terrestre 2000-2020',
         },
         {
           id: 'WATER_STRESS_CUSTOM',
@@ -264,6 +261,15 @@ export default {
           label: {
             en: 'Water Stress',
             fr: 'Stress Hydrique',
+          },
+        {
+          id: 'WIND_SPEED',
+          order: 10,
+          type: 'remoteDataLayer',
+          uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
+          label: {
+            en: 'Wind Speed Potential at 50m (m/s)',
+            fr: 'Vitesse potentielle du vent à 50 m (m/s)',
           },
         },
       ],
@@ -381,16 +387,14 @@ export default {
         //   uuid: '0b45cb69-6432-449f-af38-25cdcda85d55',
         // },
         {
-          id: 'WIND_SPEED',
-          order: 4,
-          type: 'remoteDataLayer',
-          uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
-        },
-        {
           id: 'FOREST_CARBON_NET_FLUX',
           order: 8,
           type: 'remoteDataLayer',
           uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
+          label: {
+            en: 'Forest greenhouse gas emissions / sequestration',
+            fr: 'Émissions/séquestration de gaz à effet de serre forestiers',
+          },
         },
         {
           id: 'CARBON_SEQ',

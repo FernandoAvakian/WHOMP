@@ -249,7 +249,7 @@ export default {
           label: {
             en: 'Land cover change 2000-2020',
             fr: 'Changement de la couverture terrestre 2000-2020',
-        },
+          },
         {
           id: 'WATER_STRESS_CUSTOM',
           groupId: 'GROUP_SOCIOECONOMIC',
@@ -262,6 +262,7 @@ export default {
             en: 'Water Stress',
             fr: 'Stress Hydrique',
           },
+        },
         {
           id: 'WIND_SPEED',
           order: 10,

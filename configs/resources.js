@@ -250,6 +250,7 @@ export default {
             en: 'Gross Domestic Product (GDP)',
             fr: 'Produit intérieur brut (PIB)',
           },
+        },
         {
           id: 'WATER_STRESS_CUSTOM',
           groupId: 'GROUP_SOCIOECONOMIC',

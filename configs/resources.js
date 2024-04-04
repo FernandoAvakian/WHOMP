@@ -230,8 +230,8 @@ export default {
             fr: 'Produit intérieur brut (PIB)',
           },
           sublabel: {
-            en: '(2011 USD, millions)',
-            fr: '(2011 USD, millions)',
+            en: '(USD, millions, 2011)',
+            fr: '(USD, millions, 2011)',
           },
         },
         {
@@ -258,10 +258,6 @@ export default {
           order: 11,
           type: 'remoteDataLayer',
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
-          label: {
-            en: 'Wind Speed Potential at 50m,
-            fr: 'Vitesse potentielle du vent à 50 m',
-          },
         },
       ],
     },
@@ -286,8 +282,8 @@ export default {
             fr: 'Stress hydrique projeté (2030)',
           },
           sublabel: {
-            en: '(business as usual scenario)',
-            fr: '(scénario du statu quo)',
+            en: '(Business as usual scenario)',
+            fr: '(Scénario du statu quo)',
           },
         },
         {
@@ -402,8 +398,8 @@ export default {
             fr: 'Blanchiment projeté des coraux',
           },
           sublabel: {
-            en: '(onset year of annual events under the RCP 8.5 scenario)',
-            fr: '(année d’apparition des événements annuels dans le cadre du scénario RCP 8.5)',
+            en: '(Onset year of annual events under the RCP 8.5 scenario)',
+            fr: '(Année d’apparition des événements annuels dans le cadre du scénario RCP 8.5)',
           },
         },
       ],

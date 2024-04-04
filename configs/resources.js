@@ -258,6 +258,10 @@ export default {
           order: 11,
           type: 'remoteDataLayer',
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
+          label: {
+            en: 'Wind Speed Potential at 50m,
+            fr: 'Vitesse potentielle du vent à 50 m',
+          },
         },
       ],
     },

@@ -207,14 +207,6 @@ export default {
         en: 'Natural Values',
         fr: 'Valeurs naturelles',
       },
-      layers: [
-        {
-          id: 'TREE_COVER',
-          order: 1,
-          type: 'remoteDataLayer',
-          uuid: '2569adca-ef87-42c4-a153-57c5e8ba0ef7',
-        },
-      ],
     },
     GROUP_SOCIOECONOMIC: {
       order: 6,

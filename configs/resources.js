@@ -207,6 +207,7 @@ export default {
         en: 'Natural Values',
         fr: 'Valeurs naturelles',
       },
+      layers: [],
     },
     GROUP_SOCIOECONOMIC: {
       order: 6,

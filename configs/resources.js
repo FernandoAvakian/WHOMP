@@ -230,8 +230,8 @@ export default {
             fr: 'Produit intérieur brut (PIB)',
           },
           sublabel: {
-            en: '(USD, millions, 2011)',
-            fr: '(USD, millions, 2011)',
+            en: 'USD, millions, 2011',
+            fr: 'USD, millions, 2011',
           },
         },
         {
@@ -282,8 +282,8 @@ export default {
             fr: 'Stress hydrique projeté (2030)',
           },
           sublabel: {
-            en: '(Business as usual scenario)',
-            fr: '(Scénario du statu quo)',
+            en: 'Business as usual scenario',
+            fr: 'Scénario du statu quo',
           },
         },
         {
@@ -398,8 +398,8 @@ export default {
             fr: 'Blanchiment projeté des coraux',
           },
           sublabel: {
-            en: '(Onset year of annual events under the RCP 8.5 scenario)',
-            fr: '(Année d’apparition des événements annuels dans le cadre du scénario RCP 8.5)',
+            en: 'Onset year of annual events under the RCP 8.5 scenario',
+            fr: 'Année d’apparition des événements annuels dans le cadre du scénario RCP 8.5',
           },
         },
       ],

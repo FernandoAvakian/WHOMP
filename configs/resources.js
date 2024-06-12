@@ -183,8 +183,8 @@ export default {
       order: 1,
       groupType: 'default',
       label: {
-        en: 'World Heritage',
-        fr: 'Patrimoine mondial',
+        en: 'UNESCO designated sites',
+        fr: "Sites désignés par l'UNESCO",
       },
       layers: [],
     },

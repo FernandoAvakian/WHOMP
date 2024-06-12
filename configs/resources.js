@@ -301,6 +301,10 @@ export default {
           order: 11,
           type: 'remoteDataLayer',
           uuid: '9fa60bd9-0643-4d0a-a569-0036e902d1f9',
+          label: {
+            en: 'Wind speed potential to Wind Speed Potential at 50m (m/s)',
+            fr: 'Vitesse potentielle du vent à 50 m (m/s)',
+          },
         },
       ],
     },
@@ -421,6 +425,10 @@ export default {
           order: 8,
           type: 'remoteDataLayer',
           uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
+          label: {
+            en: 'Forest greenhouse gas emissions / sequestration. ',
+            fr: 'Émissions / séquestration de gaz à effet de serre dans les forêts',
+          },
         },
         {
           id: 'CARBON_SEQ',

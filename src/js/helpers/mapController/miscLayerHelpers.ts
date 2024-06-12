@@ -213,6 +213,7 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
         : legendInfo?.layers.find((l: any) => l.layerId === layer.layerId);
 
       const { id, title, opacity, visible, definitionExpression, url, maxScale, minScale } = layer;
+
       mapLayerObjects.push({
         id,
         title,
@@ -358,6 +359,8 @@ export async function getRemoteAndServiceLayers(): Promise<any> {
           layerGroupId: layer.groupId,
           dataLayer: layer,
           searchField: layer.searchField,
+          label: layer.label,
+          sublabel: layer.sublabel,
         });
       } else if (layer.type === 'flagship') {
         remoteDataLayers.push({
@@ -400,7 +403,11 @@ export async function getRemoteAndServiceLayers(): Promise<any> {
         const itemGroup = item.group;
         //if metadata url does not exist and a object is in its place
         if (layer.attributes.layerConfig.metadata.constructor.name === 'Object') {
-          item.layer = layer.attributes.layerConfig;
+          item.layer = {
+            ...layer.attributes.layerConfig,
+            ...(item.label ? { label: item.label } : {}),
+            ...(item.sublabel ? { sublabel: item.sublabel } : {}),
+          };
           item.dashboardURL = item.dataLayer?.dashboardURL?.length !== 0 ? item.dataLayer.dashboardURL : null;
           item.group = itemGroup;
           item.layer.metadata = {
@@ -416,7 +423,11 @@ export async function getRemoteAndServiceLayers(): Promise<any> {
           return fetch(layer.attributes.layerConfig.metadata)
             .then((response) => response.json())
             .then((metadata) => {
-              item.layer = layer.attributes.layerConfig;
+              item.layer = {
+                ...layer.attributes.layerConfig,
+                ...(item.label ? { label: item.label } : {}),
+                ...(item.sublabel ? { sublabel: item.sublabel } : {}),
+              };
               item.dashboardURL = item.dataLayer?.dashboardURL?.length !== 0 ? item.dataLayer.dashboardURL : null;
               item.group = itemGroup;
               item.layer.metadata = {
@@ -532,8 +543,8 @@ export async function getRemoteAndServiceLayers(): Promise<any> {
                 order: item.order,
                 url: layer.assets.find((a) => a[0] === 'Raster tile cache')[1],
                 type: 'webtiled',
-                label: { en: layer.metadata.title },
-                sublabel: item.dataLayer.sublabel,
+                label: item.label || { en: layer.metadata.title },
+                sublabel: item.sublabel || item.dataLayer.sublabel,
                 layerGroupId: item.layerGroupId,
                 group: item.layerGroupId,
                 metadata: {

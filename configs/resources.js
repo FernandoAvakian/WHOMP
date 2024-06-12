@@ -72,35 +72,23 @@ export default {
   disabledAnalysisModules: [], //'VIIRS_FIRES', 'GLAD_ALERTS', 'TC_LOSS', 'IFL', 'LCC'
   // layers added in Arcgis Online, map id layer with the group id
   webmapLayerGroupsMap: {
-    '18c59090835-layer-73': 'GROUP_CUSTOM_BASEMAP',
-    '18c590868ad-layer-72': 'GROUP_CUSTOM_BASEMAP',
-    '18c5907c5ac-layer-71': 'GROUP_CUSTOM_BASEMAP',
-    '18c5906db15-layer-70': 'GROUP_CUSTOM_BASEMAP',
-    '18c590636fa-layer-69': 'GROUP_CUSTOM_BASEMAP',
-    '18c590528da-layer-68': 'GROUP_CUSTOM_BASEMAP',
-    '18c58f281b8-layer-61': 'GROUP_THREATS_AND_RISKS',
-    '18c58eaed6d-layer-57': 'GROUP_THREATS_AND_RISKS',
-    '18c58e9d446-layer-56': 'GROUP_THREATS_AND_RISKS',
-    '18c58e80282-layer-55': 'GROUP_THREATS_AND_RISKS',
-    '18c58e6fcdb-layer-54': 'GROUP_THREATS_AND_RISKS',
-    '18c5ced2b0f-layer-61': 'GROUP_SOCIOECONOMIC',
-    '18c58d7ee0c-layer-50': 'GROUP_CLIMATE',
-    '18c58c6ee07-layer-42': 'GROUP_NATURAL_VALUES',
-    '18c5900c801-layer-67': 'GROUP_NATURAL_VALUES',
+    // GROUP_WORLD_HERITAGE
+    '18c58986620-layer-2': 'GROUP_WORLD_HERITAGE',
+    '18c58986622-layer-3': 'GROUP_WORLD_HERITAGE',
+    '18c58986623-layer-4': 'GROUP_WORLD_HERITAGE',
+
+    // GROUP_NEAR_REAL_TIME
     '18c58a3f1ff-layer-5': 'GROUP_NEAR_REAL_TIME',
-    '18c58fa310b-layer-64': 'GROUP_THREATS_AND_RISKS',
-    '18c58f6c14a-layer-62': 'GROUP_THREATS_AND_RISKS',
-    '18c58dcc81e-layer-51': 'GROUP_CLIMATE',
-    '18c58cd02d5-layer-49': 'GROUP_NATURAL_VALUES',
-    '18c58ccc1cb-layer-48': 'GROUP_NATURAL_VALUES',
-    '18c58cae831-layer-46': 'GROUP_NATURAL_VALUES',
-    '18c58cae396-layer-45': 'GROUP_NATURAL_VALUES',
-    '18c58c9d49e-layer-44': 'GROUP_NATURAL_VALUES',
-    '18c58c83da9-layer-43': 'GROUP_NATURAL_VALUES',
-    '18c58bf0c0e-layer-38': 'GROUP_PROTECTION_AND_MANAGEMENT',
-    '18c58bf06a5-layer-37': 'GROUP_PROTECTION_AND_MANAGEMENT',
-    '18c58bd4502-layer-34': 'GROUP_PROTECTION_AND_MANAGEMENT',
-    '18c58bd4502-layer-35': 'GROUP_PROTECTION_AND_MANAGEMENT',
+    GFSR_3hour_6782: 'GROUP_NEAR_REAL_TIME',
+    SPEI_v1_recent_23: 'GROUP_NEAR_REAL_TIME',
+    GFSR_3hour_8103: 'GROUP_NEAR_REAL_TIME',
+    SPEI_v1_recent_5336: 'GROUP_NEAR_REAL_TIME',
+    Coral_Reef_Stations_7587: 'GROUP_NEAR_REAL_TIME', // Coral Bleaching alerts
+    '18ef6da2ad3-layer-41': 'GROUP_NEAR_REAL_TIME', // Coral Bleaching alerts FR
+    '18ef1943aad-layer-40': 'GROUP_NEAR_REAL_TIME', // Recent earthquakes
+    USGS_Seismic_Data_v1_8734: 'GROUP_NEAR_REAL_TIME', // Recent earthquakes FR
+    VHI_D_8647: 'GROUP_NEAR_REAL_TIME', // Vegetation Health Index
+    VHI_D_2446: 'GROUP_NEAR_REAL_TIME', // Vegetation Health Index FR
     '18c58bb3d40-layer-18': 'GROUP_NEAR_REAL_TIME',
     '18c58bb3d41-layer-19': 'GROUP_NEAR_REAL_TIME',
     '18c58bb3d42-layer-20': 'GROUP_NEAR_REAL_TIME',
@@ -120,15 +108,70 @@ export default {
     '18c58b1f840-layer-9': 'GROUP_NEAR_REAL_TIME',
     '18c58b1f841-layer-10': 'GROUP_NEAR_REAL_TIME',
     '18c58b1f841-layer-11': 'GROUP_NEAR_REAL_TIME',
-    '18c58986620-layer-2': 'GROUP_WORLD_HERITAGE',
-    '18c58986622-layer-3': 'GROUP_WORLD_HERITAGE',
-    '18c58986623-layer-4': 'GROUP_WORLD_HERITAGE',
+
+    // GROUP_PROTECTION_AND_MANAGEMENT
+    '18c58bf0c0e-layer-38': 'GROUP_PROTECTION_AND_MANAGEMENT',
+    '18c58bf06a5-layer-37': 'GROUP_PROTECTION_AND_MANAGEMENT',
+    '18c58bd4502-layer-34': 'GROUP_PROTECTION_AND_MANAGEMENT',
+    '18c58bd4502-layer-35': 'GROUP_PROTECTION_AND_MANAGEMENT',
+
+    // GROUP_NATURAL_VALUES
+    Glaciated_Areas_3800: 'GROUP_NATURAL_VALUES', // Glaciated Areas
+    Glaciated_Areas_6249: 'GROUP_NATURAL_VALUES', // Glaciated Areas FR
+    '18fe3c6457d-layer-51': 'GROUP_NATURAL_VALUES', // Terrestrial species richness
+    Terrestrial_species_richness_3076: 'GROUP_NATURAL_VALUES', // Terrestrial species richness FR
+    '18fe3adc785-layer-51': 'GROUP_NATURAL_VALUES', // Terrestrial threatened species
+    '18fe3b519f4-layer-40': 'GROUP_NATURAL_VALUES', // Terrestrial threatened species FR
+    '18fe2b070c6-layer-51': 'GROUP_NATURAL_VALUES', // Marine species richness
+    OBIS_Marine_biodiversity_richness_6349: 'GROUP_NATURAL_VALUES', // Marine species richness FR
+    OBIS_Marine_biodiversity_richness_5696: 'GROUP_NATURAL_VALUES', // Marine threatened species
+    '18fe792a926-layer-41': 'GROUP_NATURAL_VALUES', // Marine threatened species FR
+    '18c58c6ee07-layer-42': 'GROUP_NATURAL_VALUES',
+    '18c5900c801-layer-67': 'GROUP_NATURAL_VALUES',
+    '18c58cd02d5-layer-49': 'GROUP_NATURAL_VALUES',
+    '18c58ccc1cb-layer-48': 'GROUP_NATURAL_VALUES',
+    '18c58cae831-layer-46': 'GROUP_NATURAL_VALUES',
+    '18c58cae396-layer-45': 'GROUP_NATURAL_VALUES',
+    '18c58c9d49e-layer-44': 'GROUP_NATURAL_VALUES',
+    '18c58c83da9-layer-43': 'GROUP_NATURAL_VALUES',
+
+    // GROUP_CLIMATE
+    '18c58d7ee0c-layer-50': 'GROUP_CLIMATE',
+    '18c58dcc81e-layer-51': 'GROUP_CLIMATE',
+    TotalAnnualPrecipitation_6611: 'GROUP_CLIMATE', // Total annual precipitation
+    TotalAnnualPrecipitation_3229: 'GROUP_CLIMATE', // Total annual precipitation FR
+    Change_TempPre2050_9714: 'GROUP_CLIMATE', // Projected precipitation change by 2050
+    '18ef6f7fa13-layer-37': 'GROUP_CLIMATE', // Projected precipitation change by 2050 FR
+    Annual_Temp_6938: 'GROUP_CLIMATE', // Annual mean temperature
+    Annual_Temp_738: 'GROUP_CLIMATE', // Annual mean temperature FR
+    Change_Temp2050_7022: 'GROUP_CLIMATE', // Projected temperature change by 2050
+    '18ef6f7b72f-layer-36': 'GROUP_CLIMATE', // Projected temperature change by 2050 FR
+
+    // GROUP_SOCIOECONOMIC
+    '18c5ced2b0f-layer-61': 'GROUP_SOCIOECONOMIC',
     sdei_global_annual_avg_pm2_5_2001_2010_image_service_7231: 'GROUP_SOCIOECONOMIC',
     sdei_global_annual_avg_pm2_5_2001_2010_image_service_6238: 'GROUP_SOCIOECONOMIC',
-    GFSR_3hour_6782: 'GROUP_NEAR_REAL_TIME',
-    SPEI_v1_recent_23: 'GROUP_NEAR_REAL_TIME',
-    GFSR_3hour_8103: 'GROUP_NEAR_REAL_TIME',
-    SPEI_v1_recent_5336: 'GROUP_NEAR_REAL_TIME',
+    Conventional_Statistics_and_Big_Data_to_Map_Global_Tourism_Destinations_Before_COVID_5661: 'GROUP_SOCIOECONOMIC', // Total yearly tourists
+    Conventional_Statistics_and_Big_Data_to_Map_Global_Tourism_Destinations_Before_COVID_5680: 'GROUP_SOCIOECONOMIC', // Total yearly tourists FR
+
+    // GROUP_THREATS_AND_RISKS
+    '18c58f281b8-layer-61': 'GROUP_THREATS_AND_RISKS',
+    '18c58eaed6d-layer-57': 'GROUP_THREATS_AND_RISKS',
+    '18c58e9d446-layer-56': 'GROUP_THREATS_AND_RISKS',
+    '18c58e80282-layer-55': 'GROUP_THREATS_AND_RISKS',
+    '18c58e6fcdb-layer-54': 'GROUP_THREATS_AND_RISKS',
+    '18c58fa310b-layer-64': 'GROUP_THREATS_AND_RISKS',
+    '18c58f6c14a-layer-62': 'GROUP_THREATS_AND_RISKS',
+
+    // GROUP_CUSTOM_BASEMAP
+    '18c59090835-layer-73': 'GROUP_CUSTOM_BASEMAP', // Dark Gray Canvas
+    '18c5907c5ac-layer-71': 'GROUP_CUSTOM_BASEMAP', // Topographic
+    '18c5906db15-layer-70': 'GROUP_CUSTOM_BASEMAP', // Streets
+    '18c590636fa-layer-69': 'GROUP_CUSTOM_BASEMAP', // Light Gray Canvas
+    '18ec2e2d84a-layer-42': 'GROUP_CUSTOM_BASEMAP', // White background
+    '18ec2e49a69-layer-38': 'GROUP_CUSTOM_BASEMAP', // White background FR
+    '18c590868ad-layer-72': 'GROUP_CUSTOM_BASEMAP', // ????
+    '18c590528da-layer-68': 'GROUP_CUSTOM_BASEMAP', // ????
   },
   layerPanel: {
     GROUP_WEBMAP: {
@@ -238,7 +281,7 @@ export default {
           id: 'UMD_LAND_COVER',
           order: 10,
           type: 'remoteDataLayer',
-          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89'
+          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89',
         },
         {
           id: 'WATER_STRESS_CUSTOM',
@@ -383,7 +426,7 @@ export default {
           id: 'CARBON_SEQ',
           order: 9,
           type: 'remoteDataLayer',
-          uuid: 'e7208398-0acd-4f73-a824-c4fe1e356e0c'
+          uuid: 'e7208398-0acd-4f73-a824-c4fe1e356e0c',
         },
         {
           id: 'CORAL_BLEACHING_RISK_CUSTOM',

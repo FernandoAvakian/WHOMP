@@ -138,7 +138,7 @@ const SaveAOI = (): JSX.Element => {
           }
           return res.data.id;
         })
-        .catch((e) => console.log('failed to register geostore', e));
+        .catch((e) => console.error('failed to register geostore', e));
     }
     const userToken = localStorage.getItem('userToken');
     const payload = {
@@ -278,7 +278,7 @@ const SaveAOI = (): JSX.Element => {
       .catch((e) => {
         setDeleteSuccess(true);
         setUpdateSuccess(true);
-        console.log(e);
+        console.error(e);
       });
   }
 

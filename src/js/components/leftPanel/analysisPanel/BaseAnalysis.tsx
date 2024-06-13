@@ -121,7 +121,7 @@ const BaseAnalysis = (): JSX.Element => {
           dispatch(setActiveFeatures(oldActiveFeatures));
           setGeostoreReady(true);
         })
-        .catch((e) => console.log('failed to register geostore', e));
+        .catch((e) => console.error('failed to register geostore', e));
     }
   }, [dispatch, activeFeatures, activeFeatureIndex, selectedAnalysis]);
 

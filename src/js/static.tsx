@@ -38,7 +38,6 @@ class MapBuilder {
     // this.config = config;
     this.element = params.el;
     this.builderMain = new MapBuilderMain(params.config);
-    console.log(params);
     this.render();
   }
 

@@ -14,13 +14,10 @@ interface ThemeDropdownProps {
 const ThemeDropdown = (props: ThemeDropdownProps): JSX.Element => {
   const [activeTheme, setActiveTheme] = React.useState('');
 
-  const navLinksInNewTab = useSelector(
-    (store: RootState) => store.appSettings.navLinksInNewTab
-  );
+  const navLinksInNewTab = useSelector((store: RootState) => store.appSettings.navLinksInNewTab);
   const target = navLinksInNewTab ? '_blank' : '_self';
 
   function handleThemeSelection(themeID: string): void {
-    console.log(themeID);
     setActiveTheme(themeID);
   }
 
@@ -28,7 +25,7 @@ const ThemeDropdown = (props: ThemeDropdownProps): JSX.Element => {
     return {
       title: props.mapThemes[index],
       alternativeTitle: props.alternativeMapThemes[index],
-      id: props.mapThemeIds[index]
+      id: props.mapThemeIds[index],
     };
   });
 
@@ -64,9 +61,7 @@ const ThemeDropdown = (props: ThemeDropdownProps): JSX.Element => {
       <ul className="dropdown">
         <span className="label-wrapper" role="listitem">
           <ThemeIcon height={16} width={16} fill={'#555'} />
-          <li className="dropdown-label">
-            {headerContent[props.selectedLanguage]?.mapThemes}
-          </li>
+          <li className="dropdown-label">{headerContent[props.selectedLanguage]?.mapThemes}</li>
         </span>
         <ul className="options">{options}</ul>
       </ul>

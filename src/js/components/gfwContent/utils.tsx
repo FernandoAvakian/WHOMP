@@ -44,7 +44,7 @@ export function allRequiredFieldsPresent(userData: UserData): Array<string> {
   const missingKeys: string[] = [];
   for (const requiredKey of requiredFields) {
     const value = userData.attributes[requiredKey];
-    if (!value || value.length === 0 || (Array.isArray(value) && value.every(k => k.length === 0))) {
+    if (!value || value.length === 0 || (Array.isArray(value) && value.every((k) => k.length === 0))) {
       missingKeys.push(requiredKey);
     }
   }
@@ -64,7 +64,7 @@ export async function getUserData(
   const result: GetUserData = {
     userData: null,
     error: false,
-    errorMsg: ''
+    errorMsg: '',
   };
   if (!userID || !userToken) return result;
   const BASE_PROFILE_URL = `https://production-api.globalforestwatch.org/user/${userID}`;
@@ -78,10 +78,10 @@ export async function getUserData(
     method: method,
     credentials: 'include',
     headers: {
-      Authorization: `Bearer ${userToken}`
-    }
+      Authorization: `Bearer ${userToken}`,
+    },
   })
-    .then(res => res.json())
+    .then((res) => res.json())
     .then((data: any) => {
       if (data?.errors) {
         error = true;
@@ -93,14 +93,14 @@ export async function getUserData(
       // debugger;
       // return data?.data;
     })
-    .catch(e => {
-      console.log(e);
+    .catch((e) => {
+      console.error(e);
       error = true;
       return null;
     })) as UserData;
   return {
     userData: userData || null,
     error: error,
-    errorMsg: errorMsg
+    errorMsg: errorMsg,
   };
 }

@@ -41,8 +41,7 @@ const EditProfile = (): JSX.Element => {
       const data = await getUserData(userID, userToken);
       const userData = data.userData;
       if (data?.error) {
-        //hande error
-        console.log('Err:', data.errorMsg);
+        console.error('Err:', data.errorMsg);
         dispatch(setIsProfileComplete(false));
         setDataLoading(false);
       }
@@ -117,7 +116,7 @@ const EditProfile = (): JSX.Element => {
         }
       })
       .catch((e) => {
-        console.log(e);
+        console.error(e);
         setUpdateError(e);
       });
   };

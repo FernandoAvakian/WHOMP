@@ -47,7 +47,6 @@ const App = (props: AppSettings | any): JSX.Element => {
     portItem
       .fetchData('json')
       .then((res) => {
-        console.log(res);
         const { values } = res;
         dispatch(overwriteSettings({ ...resources, ...props, ...values }));
         changeDefaultLanguage(values?.language);
@@ -112,8 +111,7 @@ const App = (props: AppSettings | any): JSX.Element => {
               //check if user has completed their profile
               getUserData(data.id, userToken).then((dataRes) => {
                 if (dataRes?.error) {
-                  //handle error
-                  console.log('Err:', dataRes.errorMsg);
+                  console.error('Err:', dataRes.errorMsg);
                   dispatch(setIsProfileComplete(false));
                 } else if (dataRes?.userData) {
                   if (dataRes?.userData) {

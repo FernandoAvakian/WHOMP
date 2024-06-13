@@ -249,14 +249,14 @@ const AOIDashboard = () => {
           .then((data) => {
             setViirsAlerts(data.data.attributes.value);
           })
-          .catch((e) => console.log(e));
+          .catch((e) => console.error(e));
 
         fetch(gladAnalysisURL)
           .then((res) => res.json())
           .then((data) => {
             setGladAlerts(data.data.attributes.value);
           })
-          .catch((e) => console.log(e));
+          .catch((e) => console.error(e));
       }
 
       if (esriGeometry) {

@@ -132,12 +132,20 @@ export const requestWMSLayerLegendInfo = async (layerOWSUrl: string, sublayerNam
   )}`;
 };
 
+const getLayerGroup = (layerId: string): string => {
+  const { appSettings } = store.getState() || {};
+  const { layerPanel } = appSettings;
+  const layerGroup = Object.keys(layerPanel).find((group) => {
+    return layerPanel[group].layers?.find((layer) => layer.id === layerId);
+  });
+  return layerGroup || 'webmap';
+};
+
 export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<LayerProps[]> {
   const mapLayerObjects: LayerProps[] = [];
   if (!esriMap) return [];
-  const { appSettings } = store.getState();
   const layerArray = esriMap.layers.toArray() as any;
-
+  // We get all arrays from the esri map
   let count = 0;
   for (const layer of layerArray) {
     if (layer.type === 'graphics') continue;
@@ -161,7 +169,7 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
           },
           visible,
           definitionExpression,
-          group: appSettings.webmapLayerGroupsMap[id] || 'webmap',
+          group: getLayerGroup(layer.id),
           type: 'webmap',
           origin: 'webmap',
           url,
@@ -193,7 +201,7 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
           },
           visible,
           definitionExpression,
-          group: appSettings.webmapLayerGroupsMap[layer.id] || 'webmap',
+          group: getLayerGroup(layer.id),
           type: 'wms',
           origin: 'webmap',
           url,
@@ -213,14 +221,18 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
         : legendInfo?.layers.find((l: any) => l.layerId === layer.layerId);
 
       const { id, title, opacity, visible, definitionExpression, url, maxScale, minScale } = layer;
-
+      const resourcesConfig = store.getState().appSettings.layerPanel;
+      const layerGroup = getLayerGroup(layer.id);
+      const layerConfig = resourcesConfig[layerGroup]?.layers?.find((l) => l.id === id);
       mapLayerObjects.push({
         id,
         title,
         opacity,
         visible,
         definitionExpression,
-        group: appSettings.webmapLayerGroupsMap[id] || 'webmap',
+        group: getLayerGroup(layer.id),
+        label: layerConfig?.label || layer.label,
+        sublabel: layerConfig?.sublabel || layer.sublabel,
         type: 'webmap',
         origin: 'webmap',
         url,
@@ -247,7 +259,9 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
         legendInfo = layer.legendInfo ? layer.legendInfo : undefined;
       }
       const { id, title, opacity, visible, definitionExpression, url, maxScale, minScale } = layer;
-
+      const resourcesConfig = store.getState().appSettings.layerPanel;
+      const layerGroup = getLayerGroup(layer.id);
+      const layerConfig = resourcesConfig[layerGroup]?.layers?.find((l) => l.id === id);
       mapLayerObjects.push({
         id,
         title,
@@ -255,7 +269,9 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
         visible,
         definitionExpression,
         // adding the layers to the webmap group
-        group: appSettings.webmapLayerGroupsMap[id] || 'webmap',
+        group: getLayerGroup(layer.id),
+        label: layerConfig?.label || layer.label,
+        sublabel: layerConfig?.sublabel || layer.sublabel,
         type: 'webmap',
         origin: 'webmap',
         url,
@@ -263,6 +279,7 @@ export async function extractWebmapLayerObjects(esriMap?: __esri.Map): Promise<L
         minScale,
         sublayer: false,
         legendInfo,
+        order: layerConfig?.order,
         portalItemID: layer.portalItem && layer.portalItem.id ? layer.portalItem.id : null,
       });
     }

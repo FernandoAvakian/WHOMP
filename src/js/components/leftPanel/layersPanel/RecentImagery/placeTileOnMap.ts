@@ -14,7 +14,7 @@ export default function placeTileOnMap(tile: any): void {
     title: 'Recent Imagery',
     visible: true,
     url: tileURL,
-    type: 'imagery'
+    type: 'imagery',
   });
   if (!imageryLayer) return;
   mapController._map?.add(imageryLayer);
@@ -49,10 +49,6 @@ export default function placeTileOnMap(tile: any): void {
     // projectionParameters.geometries = [polygon];
     projectionParameters.outSpatialReference.isWebMercator;
 
-    console.log(
-      'defaultfunctionplaceTileOnMap -> projectionParameters',
-      projectionParameters
-    );
     // projectionParameters.outSpatialReference = {
     //   imageCoordinateSystem: 102100
     // };
@@ -65,9 +61,9 @@ export default function placeTileOnMap(tile: any): void {
     // geometryService
     //   .project(projectionParameters)
     //   .then(results => {
-    //     console.log(results);
+    //     console.info(results);
     //   })
-    //   .catch(e => console.log(e));
+    //   .catch(e => console.error(e));
 
     //yayayay
     //@ts-ignore
@@ -80,7 +76,6 @@ export default function placeTileOnMap(tile: any): void {
     });
     mapController._map?.add(tt);
     mapController._map?.reorder(tt, 1);
-    console.log('defaultfunctionplaceTileOnMap -> tt', tt);
   }
 }
 */

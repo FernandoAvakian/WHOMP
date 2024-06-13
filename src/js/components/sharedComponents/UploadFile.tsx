@@ -54,7 +54,7 @@ const UploadFile = (): JSX.Element => {
         body: formData,
       })
         .then((response) => response.json())
-        .catch((e) => console.log('fetching error in onDropFile()', e));
+        .catch((e) => console.error('fetching error in onDropFile()', e));
 
       const arcGISResults = geojsonToArcGIS(featureCollection.data.attributes);
 
@@ -64,7 +64,7 @@ const UploadFile = (): JSX.Element => {
             .then((response: Response) => (response.status === 200 ? response.json() : null))
             .catch((e: Error) => {
               // TODO [ ] - error handling logic (to account for when one geometry produces an error)
-              console.log('error using registerGeometry() in UploadFile.tsx', e);
+              console.error('error using registerGeometry() in UploadFile.tsx', e);
             });
 
           feature.attributes.geostoreId = registeredGeometry.data.id;
@@ -91,7 +91,7 @@ const UploadFile = (): JSX.Element => {
             // TODO [ ] - error handling logic if array is empty
           }
         })
-        .catch((e: Error) => console.log('error in registerGeometry() in onDropFile()', e));
+        .catch((e: Error) => console.error('error in registerGeometry() in onDropFile()', e));
 
       mapController.processGeojson(arcGISResults);
 

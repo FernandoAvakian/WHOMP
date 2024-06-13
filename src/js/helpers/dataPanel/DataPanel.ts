@@ -36,7 +36,7 @@ async function fetchVIIRSFeatures(mapview: __esri.MapView, mapPoint: any, viirsC
   return fetch(url)
     .then((res) => res.json())
     .then((data) => data.data)
-    .catch((e) => console.log(e));
+    .catch((e) => console.error(e));
 }
 
 export async function getAllLayerFields(layer: __esri.FeatureLayer): Promise<LayerFieldInfos> {

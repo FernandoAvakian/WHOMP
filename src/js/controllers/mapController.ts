@@ -471,11 +471,11 @@ export class MapController {
         });
       },
       (error: Error) => {
-        console.log('error in re-initializeMap()', error);
+        console.error('error in re-initializeMap()', error);
         store.dispatch(mapError(true));
       }
     ).catch((error: Error) => {
-      console.log('error in initializeMap()', error);
+      console.error('error in initializeMap()', error);
       store.dispatch(mapError(true));
     });
   }

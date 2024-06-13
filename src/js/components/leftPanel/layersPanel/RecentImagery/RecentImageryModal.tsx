@@ -53,7 +53,7 @@ const RecentImagery = (props: ImageryProps): JSX.Element => {
       }),
     })
       .then((data) => data.json())
-      .catch((e) => console.log('error', e));
+      .catch((e) => console.error('error', e));
   };
 
   const getRecentTiles = async (URL: string): Promise<any> => {
@@ -80,7 +80,7 @@ const RecentImagery = (props: ImageryProps): JSX.Element => {
       })
         .then((data) => data.json())
         .catch((e) => {
-          console.log('error', e);
+          console.error('error', e);
         });
     };
 

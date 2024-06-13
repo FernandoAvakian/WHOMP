@@ -29,7 +29,7 @@ export const getDocuments = async (urlProperties: URLProperties): Promise<Array<
         });
       }
     })
-    .catch((e) => console.log('error in getDocuments()', e));
+    .catch((e) => console.error('error in getDocuments()', e));
 
   if (attachments && attachments.length) {
     return attachments;

@@ -134,7 +134,7 @@ export interface LayerFeatureResult {
 //Action types
 export const MAP_READY = 'MAP_READY';
 export const MAP_ERROR = 'MAP_ERROR';
-export const USER_SUBSCRIPTIONS = 'USER_SUBSCRIPTIONS';
+// export const USER_SUBSCRIPTIONS = 'USER_SUBSCRIPTIONS';
 export const ALL_AVAILABLE_LAYERS = 'ALL_AVAILABLE_LAYERS';
 export const SET_ACTIVE_FEATURES = 'SET_ACTIVE_FEATURES';
 export const SET_ACTIVE_FEATURE_INDEX = 'SET_ACTIVE_FEATURE_INDEX';

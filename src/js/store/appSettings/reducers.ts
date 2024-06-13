@@ -47,7 +47,6 @@ const initialState: AppSettings = {
   footerLinks: [],
   disabledAnalysisModules: [],
   treeMosaicLandscapes: false,
-  webmapLayerGroupsMap: {},
 };
 
 export function appSettingsReducer(state = initialState, action: AppSettingsTypes): AppSettings {

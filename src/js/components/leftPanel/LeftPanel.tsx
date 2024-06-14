@@ -79,7 +79,7 @@ const Tab = (props: TabProps): React.ReactElement => {
       // data-tip={label}
       // data-offset="{'top': -5}"
       className={clsx(
-        'flex flex-col justify-center items-center text-white border-b-[6px] border-primary space-y-2 py-2 px-2 max-w-[33%] h-full',
+        'flex flex-col justify-center items-center text-white border-b-[6px] border-primary space-y-2 py-2 max-w-[33%] h-full',
         {
           'border-white': label === activeTab && tabViewVisible,
         }
@@ -156,7 +156,7 @@ const Tabs = (props: TabsProps): React.ReactElement => {
     );
   });
 
-  return <div className="px-10 flex items-end justify-between">{tabsGroupRow}</div>;
+  return <div className="px-4 flex items-end justify-between">{tabsGroupRow}</div>;
 };
 
 const LeftPanel = (): React.ReactElement => {
@@ -235,7 +235,7 @@ const LeftPanel = (): React.ReactElement => {
       data-cy="left-panel"
     >
       <div
-        className={clsx('flex flex-col w-[442px] grow bg-white transition-all duration-150 overflow-y-auto', {
+        className={clsx('flex flex-col w-[342px] grow bg-white transition-all duration-150 overflow-y-auto', {
           'opacity-0 -translate-x-full': !isShowing,
           'opacity-100 translate-x-0': isShowing,
         })}

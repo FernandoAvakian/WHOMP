@@ -71,7 +71,7 @@ const LayersTabView = (props: LayersTabViewProps) => {
   return (
     <>
       {tabViewIsVisible && (
-        <div className="px-10 py-6">
+        <div className="px-4 py-4">
           <div className="space-y-5">
             <p dangerouslySetInnerHTML={{ __html: layersPanelTranslations[selectedLanguage].description }} />
             <div className="w-1/2 h-1 border-b border-b-gray-dark" />

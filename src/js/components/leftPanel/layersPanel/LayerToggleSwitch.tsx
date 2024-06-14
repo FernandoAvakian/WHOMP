@@ -20,6 +20,7 @@ const CheckboxWrapper = styled.div<CheckBoxWrapperProps>`
 interface LayerToggleProps {
   layerIsVisible: boolean | undefined;
   layerID: string;
+  layerTitle?: string;
   sublayer?: boolean;
   parentID?: string;
 }
@@ -50,7 +51,7 @@ const LayerToggleSwitch = (props: LayerToggleProps): React.ReactElement => {
           onChange={(): void => toggleVisibility()}
         />
         <label className="styled-checkboxlabel" htmlFor={`layer-checkbox-${layerID}`}>
-          {layerID}
+          {props.layerTitle}
         </label>
       </div>
     </CheckboxWrapper>

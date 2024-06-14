@@ -218,7 +218,11 @@ const DefaultLayerGroup = ({ layerGroupKey, layerGroupConfig }: LayerGroupProps)
 
   const groupOpen = openLayerGroup === layerGroupKey;
 
+  const isLoading = useSelector((store: RootState) => store.appState.isLoading);
+
   const handleGroupToggle = () => {
+    // Dont open groups if loading. This could cause issues with race conditions
+    if (isLoading) return;
     const openGroupKey = groupOpen ? '' : layerGroupKey;
     dispatch(setOpenLayerGroup(openGroupKey));
   };

@@ -433,7 +433,7 @@ const GenericLayerControl = (props: LayerControlProps): React.ReactElement => {
         <div className="flex items-start">
           <div className="label-wrapper grow">
             <div {...props!.dndProvided!.dragHandleProps}>
-              <div className="flex items-start space-x-2">
+              <div className="flex items-start space-x-2 pr-px">
                 <div className="cursor-grabbing">
                   <DragIcon titleId="drag-icon" />
                 </div>

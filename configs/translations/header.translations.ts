@@ -218,3 +218,12 @@ export const bannerContent = {
     linkUrlText: '替换马赛克景观中的树木 - MapBuilder',
   },
 };
+
+export const datasetBannerContent = {
+  en: {
+    text: 'This tab is a beta release: some datasets may take longer to load and some legends may not display properly',
+  },
+  fr: {
+    text: "Cet onglet est une version bêta : la visualisation de certains ensembles de données peut prendre plus de temps et certaines légendes peuvent ne pas s'afficher correctement",
+  },
+};

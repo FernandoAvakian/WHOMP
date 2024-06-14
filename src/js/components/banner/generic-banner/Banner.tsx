@@ -1,17 +1,17 @@
 import React, { useCallback, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { Transition } from '@headlessui/react';
 import { BellSnoozeIcon } from '@heroicons/react/24/solid';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
-import { bannerContent } from '../../../../configs/translations/header.translations';
-import { RootState } from '../../store';
+const Banner = ({ children, cookieName }: { children: React.ReactNode; cookieName: string }) => {
+  const hasBeenClosed = localStorage.getItem(cookieName);
+  const [isHidden, setIsHidden] = useState<boolean>(hasBeenClosed === 'true');
 
-const Banner = () => {
-  const [isHidden, setIsHidden] = useState<boolean>(false);
-  const selectedLanguage = useSelector((store: RootState) => store.appState.selectedLanguage);
-
-  const handleClick = useCallback(() => setIsHidden(!isHidden), [isHidden]);
+  const handleClick = useCallback(() => {
+    localStorage.setItem(cookieName, 'true');
+    // Don't show again in session the user closes it
+    setIsHidden(!isHidden), [isHidden];
+  }, [cookieName, isHidden]);
 
   return (
     <Transition
@@ -25,17 +25,7 @@ const Banner = () => {
     >
       <div className="flex px-10 py-2.5 bg-warn space-x-4">
         <BellSnoozeIcon className="h-4 w-4 text-gray-dark" />
-        <div className="grow font-sans text-gray-dark text-xs">
-          {bannerContent[selectedLanguage].text}{' '}
-          <a
-            href={'http://mapbuilder.wri.org/tutorials/tml-to-tcc'}
-            className="underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {bannerContent[selectedLanguage].linkUrlText}
-          </a>
-        </div>
+        <div className="grow font-sans text-gray-dark text-xs">{children}</div>
         <button
           className="flex items-center justify-center rounded-full h-4 w-4 bg-white border border-gray-dark overflow-hidden"
           onClick={handleClick}

@@ -6,8 +6,6 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 import { RootState } from '../../../../js/store';
 import { setOpenLayerGroup } from '../../../../js/store/appState/actions';
 import ImagerySlider from './RecentImagery/ImagerySlider';
-import { InfoIcon } from '../../../../images/infoIcon';
-import { renderModal, setInfoModalLayerID } from '../../../../js/store/appState/actions';
 import RecentImagery from './RecentImagery/RecentImageryModal';
 import { format } from 'date-fns';
 import { mapController } from '../../../../js/controllers/mapController';
@@ -44,15 +42,7 @@ const ImageryLayersGroup = (props: LayerGroupProps): React.ReactElement => {
   }
   const ImageryLayerControl = (props: ImageryInfo): JSX.Element => {
     const customColorTheme = useSelector((store: RootState) => store.appSettings.customColorTheme);
-    const dispatch = useDispatch();
     const themeColor = handleCustomColorTheme(customColorTheme);
-
-    const openInfoModal = (): void => {
-      if (props.id) {
-        dispatch(renderModal('InfoContent'));
-        dispatch(setInfoModalLayerID(props.id));
-      }
-    };
 
     const parseDynamicSublabel = (): string => {
       if (hoverTileData) {
@@ -82,14 +72,7 @@ const ImageryLayersGroup = (props: LayerGroupProps): React.ReactElement => {
               </div>
             </div>
           </div>
-          <div
-            className="flex items-center justify-between"
-            // style={{
-            //   display: 'grid',
-            //   gridTemplateColumns: '1fr 1fr',
-            //   alignItems: 'center',
-            // }}
-          >
+          <div className="flex items-center justify-between">
             <button
               style={{ border: `1px solid ${themeColor}` }}
               className="btn-secondary px-2 py-1"
@@ -97,14 +80,6 @@ const ImageryLayersGroup = (props: LayerGroupProps): React.ReactElement => {
             >
               EDIT
             </button>
-
-            <div
-              className="info-icon-container"
-              style={{ marginLeft: 10, backgroundColor: `${themeColor}` }}
-              onClick={(): void => openInfoModal()}
-            >
-              <InfoIcon width={10} height={10} fill={'#fff'} />
-            </div>
           </div>
         </div>
         <p

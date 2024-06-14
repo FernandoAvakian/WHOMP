@@ -347,6 +347,7 @@ const GenericLayerControl = (props: LayerControlProps): React.ReactElement => {
         <LayerToggleSwitch
           layerIsVisible={layer?.visible}
           layerID={props.id}
+          layerTitle={layer?.title}
           sublayer={props.sublayer}
           parentID={props.parentID}
         />

@@ -110,6 +110,54 @@ export default {
       },
       layers: [
         {
+          // Tracked fishing activity
+          id: '18c58b78fc5-layer-13',
+          order: 1,
+          type: 'arcgis',
+        },
+        {
+          // Coral bleaching alerts
+          id: 'Coral_Reef_Stations_7587',
+          order: 2,
+          type: 'arcgis',
+        },
+        {
+          // Coral bleaching alerts FR
+          id: '18ef6da2ad3-layer-41',
+          order: 2,
+          type: 'arcgis',
+        },
+        // {
+        // ???? Not in map
+        //   id: '18c58a3f1ff-layer-5',
+        //   order: 2,
+        //   type: 'arcgis',
+        // },
+        {
+          // Recent earthquakes
+          id: '18ef1943aad-layer-40',
+          order: 3,
+          type: 'arcgis',
+        },
+        {
+          // Recent earthquakes FR
+          id: 'USGS_Seismic_Data_v1_8734',
+          order: 3,
+          type: 'arcgis',
+        },
+        {
+          // Vegetation Health Index
+          id: 'VHI_D_8647',
+          order: 4,
+          type: 'arcgis',
+        },
+        {
+          // Vegetation Health Index FR
+          id: 'VHI_D_2446',
+          order: 4,
+          type: 'arcgis',
+        },
+        {
           id: 'TREE_COVER_LOSS',
           order: 9,
           type: 'remoteDataLayer',
@@ -146,61 +194,23 @@ export default {
           },
         },
         {
-          id: '18c58a3f1ff-layer-5',
-          order: 2,
-          type: 'arcgis',
-        },
-        {
           id: 'GFSR_3hour_6782',
-          order: 3,
-          type: 'arcgis',
-        },
-        {
-          id: 'SPEI_v1_recent_23',
-          order: 4,
-          type: 'arcgis',
-        },
-        {
-          id: 'GFSR_3hour_8103',
           order: 5,
           type: 'arcgis',
         },
         {
-          id: 'SPEI_v1_recent_5336',
+          id: 'SPEI_v1_recent_23',
           order: 6,
           type: 'arcgis',
         },
         {
-          id: 'Coral_Reef_Stations_7587',
+          id: 'GFSR_3hour_8103',
           order: 7,
           type: 'arcgis',
         },
         {
-          id: '18ef6da2ad3-layer-41',
+          id: 'SPEI_v1_recent_5336',
           order: 8,
-          type: 'arcgis',
-        },
-        {
-          // Vegetation Health Index
-          id: 'VHI_D_8647',
-          order: 9,
-          type: 'arcgis',
-        },
-        {
-          // Vegetation Health Index FR
-          id: 'VHI_D_2446',
-          order: 9,
-          type: 'arcgis',
-        },
-        {
-          // Recent earthquakes
-          id: '18ef1943aad-layer-40',
-          order: 11,
-          type: 'arcgis',
-        },
-        {
-          id: 'USGS_Seismic_Data_v1_8734',
-          order: 10,
           type: 'arcgis',
         },
         {
@@ -266,11 +276,6 @@ export default {
         {
           id: '18c58b9718b-layer-16',
           order: 25,
-          type: 'arcgis',
-        },
-        {
-          id: '18c58b78fc5-layer-13',
-          order: 26,
           type: 'arcgis',
         },
         {
@@ -353,49 +358,49 @@ export default {
         {
           // Terrestrial species richness
           id: '18fe3c6457d-layer-51',
-          order: 2,
+          order: 14,
           type: 'arcgis',
         },
         {
           // Terrestrial species richness FR
           id: 'Terrestrial_species_richness_3076',
-          order: 2,
+          order: 14,
           type: 'arcgis',
         },
         {
           // Terrestrial threatened species
           id: '18fe3adc785-layer-51',
-          order: 3,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Terrestrial threatened species FR
           id: '18fe3b519f4-layer-40',
-          order: 3,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Marine species richness
           id: '18fe2b070c6-layer-51',
-          order: 4,
+          order: 16,
           type: 'arcgis',
         },
         {
           // Marine species richness FR
           id: 'OBIS_Marine_biodiversity_richness_6349',
-          order: 4,
+          order: 16,
           type: 'arcgis',
         },
         {
           // Marine threatened species
           id: 'OBIS_Marine_biodiversity_richness_5696',
-          order: 5,
+          order: 17,
           type: 'arcgis',
         },
         {
           // Marine threatened species FR
           id: '18fe792a926-layer-41',
-          order: 5,
+          order: 17,
           type: 'arcgis',
         },
         {
@@ -505,13 +510,13 @@ export default {
         {
           // Total yearly tourism visits (2019)
           id: 'Conventional_Statistics_and_Big_Data_to_Map_Global_Tourism_Destinations_Before_COVID_5661',
-          order: 15,
+          order: 20,
           type: 'arcgis',
         },
         {
           // Total yearly tourism visits (2019) FR
           id: 'Conventional_Statistics_and_Big_Data_to_Map_Global_Tourism_Destinations_Before_COVID_5680',
-          order: 15,
+          order: 20,
           type: 'arcgis',
         },
       ],
@@ -644,16 +649,6 @@ export default {
           },
         },
         {
-          //  Biomass carbon (above and below ground)
-          id: 'World_Biomass_Carbon_8621',
-          order: 100,
-          type: 'arcgis',
-          sublabel: {
-            en: 'Darker tones of green = higher levels of carbon storage.',
-            fr: 'Tons de vert plus foncés = niveaux plus élevés de stockage de carbone.',
-          },
-        },
-        {
           id: 'CARBON_SEQ',
           order: 9,
           type: 'remoteDataLayer',
@@ -677,63 +672,73 @@ export default {
           },
         },
         {
-          // ???? OUTDATED?
-          id: '18c58d7ee0c-layer-50',
-          order: 1,
+          //  Biomass carbon (above and below ground)
+          id: 'World_Biomass_Carbon_8621',
+          order: 11,
           type: 'arcgis',
+          sublabel: {
+            en: 'Darker tones of green = higher levels of carbon storage.',
+            fr: 'Tons de vert plus foncés = niveaux plus élevés de stockage de carbone.',
+          },
         },
+        // {
+        //   // ???? Not in map
+        //   id: '18c58d7ee0c-layer-50',
+        //   order: 1,
+        //   type: 'arcgis',
+        // },
         {
           // Sea level trend
           id: '18c58dcc81e-layer-51',
-          order: 2,
+          order: 12,
           type: 'arcgis',
         },
         {
           // Total annual precipitation
           id: 'TotalAnnualPrecipitation_6611',
-          order: 3,
+          order: 13,
           type: 'arcgis',
         },
         {
           // Total annual precipitation FR
           id: 'TotalAnnualPrecipitation_3229',
-          order: 3,
+          order: 13,
           type: 'arcgis',
         },
         {
           // Projected precipitation change by 2050
           id: 'Change_TempPre2050_9714',
-          order: 5,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Projected precipitation change by 2050 FR
           id: '18ef6f7fa13-layer-37',
-          order: 6,
+          order: 16,
           type: 'arcgis',
         },
         {
           // Annual mean temperature
           id: 'Annual_Temp_6938',
-          order: 7,
+          order: 17,
           type: 'arcgis',
         },
         {
           // Annual mean temperature FR
           id: 'Annual_Temp_738',
-          order: 8,
+          order: 18,
           type: 'arcgis',
         },
         {
           // Projected temperature change by 2050
           id: 'Change_Temp2050_7022',
-          order: 9,
+          order: 19,
           type: 'arcgis',
         },
         {
           // Projected temperature change by 2050 FR
           id: '18ef6f7b72f-layer-36',
-          order: 10,
+          order: 19,
           type: 'arcgis',
         },
       ],

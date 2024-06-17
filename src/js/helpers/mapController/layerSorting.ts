@@ -10,25 +10,25 @@ export function getSortedLayers(
   if (!map) return;
   let mapLayerIDs = [] as string[];
   //Lets order layers groups first
-  const orderedGroups = sortBy(Object.keys(layerPanelSettings), key => {
+  const orderedGroups = sortBy(Object.keys(layerPanelSettings), (key) => {
     return layerPanelSettings[key].order;
   });
   //Order layers within layer groups
   const orderedLayerGroups = orderedGroups
-    .map(group => {
+    .map((group) => {
       //jam in webmap layers in here as they do not appear in settings
       if (group === 'GROUP_WEBMAP') {
-        return allLayerObjects.filter(o => o.group === 'webmap');
+        return allLayerObjects.filter((o) => o.group === 'webmap');
       }
-      const layersInGroup = sortBy(layerPanelSettings[group].layers, l => {
+      const layersInGroup = sortBy(layerPanelSettings[group].layers, (l) => {
         return l.order;
       });
       return layersInGroup;
     })
-    .filter(group => group?.length);
+    .filter((group) => group?.length);
   const flattenedLayerGroups = flatten(orderedLayerGroups);
 
-  flattenedLayerGroups.forEach(layerGroup => {
+  flattenedLayerGroups.forEach((layerGroup) => {
     //attempt to grab layer id  from the map
     const layer = map.findLayerById(layerGroup.id);
     if (layer) {
@@ -40,9 +40,7 @@ export function getSortedLayers(
       mapLayerIDs.push(layer?.id);
     }
   });
-  mapLayerIDs = mapLayerIDs
-    .filter((id: string, index: number) => mapLayerIDs.indexOf(id) === index)
-    .reverse();
+  mapLayerIDs = mapLayerIDs.filter((id: string, index: number) => mapLayerIDs.indexOf(id) === index);
 
   return mapLayerIDs;
 }

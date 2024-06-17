@@ -41,7 +41,7 @@ const LayerToggleSwitch = (props: LayerToggleProps): React.ReactElement => {
 
   return (
     <CheckboxWrapper customColorTheme={themeColor}>
-      <div className="layer-checkbox">
+      <div className="layer-checkbox -translate-y-1">
         <input
           type="checkbox"
           name="styled-checkbox"
@@ -51,7 +51,7 @@ const LayerToggleSwitch = (props: LayerToggleProps): React.ReactElement => {
           onChange={(): void => toggleVisibility()}
         />
         <label className="styled-checkboxlabel" htmlFor={`layer-checkbox-${layerID}`}>
-          {props.layerTitle}
+          <span className="sr-only">Toggle layer visibility</span>
         </label>
       </div>
     </CheckboxWrapper>

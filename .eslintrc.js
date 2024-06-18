@@ -25,6 +25,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/camelcase': 0,
     quotes: ['warn', 'single'],
-    'no-console': 'warn',
+    'no-console': ['warn', { allow: ['error'] }],
   },
 };

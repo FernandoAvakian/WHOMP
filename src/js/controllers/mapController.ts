@@ -461,6 +461,13 @@ export class MapController {
               }
             });
 
+            // Sort layers on the sidebar
+            const reorderedLayers = allLayerObjects.sort((a, b) => {
+              return mapLayerIDs!.indexOf(a.id) - mapLayerIDs!.indexOf(b.id);
+            });
+
+            store.dispatch(allAvailableLayers(reorderedLayers));
+
             //Extra layer group that acts as a "masked" layers with which you cannot interact
             this.addExtraLayers();
             //Sketch view model setup
@@ -471,11 +478,11 @@ export class MapController {
         });
       },
       (error: Error) => {
-        console.log('error in re-initializeMap()', error);
+        console.error('error in re-initializeMap()', error);
         store.dispatch(mapError(true));
       }
     ).catch((error: Error) => {
-      console.log('error in initializeMap()', error);
+      console.error('error in initializeMap()', error);
       store.dispatch(mapError(true));
     });
   }
@@ -692,7 +699,6 @@ export class MapController {
       //@ts-ignore
       this._map?.addMany(esriNonWebmapLayers);
       const allLayerObjects = [...updatedLayerObjects, ...mapLayerObjects];
-      store.dispatch(allAvailableLayers(allLayerObjects));
       const mapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map);
 
       this.addExtraLayers();
@@ -704,6 +710,13 @@ export class MapController {
           this._map?.reorder(layer, layerIndex);
         }
       });
+
+      // Sort layers on the sidebar
+      const reorderedLayers = allLayerObjects.sort((a, b) => {
+        return mapLayerIDs!.indexOf(a.id) - mapLayerIDs!.indexOf(b.id);
+      });
+      store.dispatch(allAvailableLayers(reorderedLayers));
+
       this.initializeAndSetSketch();
     });
   }

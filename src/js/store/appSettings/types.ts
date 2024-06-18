@@ -47,7 +47,6 @@ export interface AppSettings {
   downloadLinkUrl?: string;
   footerLinks: FooterLink[];
   treeMosaicLandscapes: boolean;
-  webmapLayerGroupsMap: Record<string, string>;
 }
 
 type FooterLink = { label: string; link: string };

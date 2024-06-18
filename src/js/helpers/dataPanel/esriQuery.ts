@@ -8,7 +8,7 @@ export async function esriQuery(url: string, queryParams: any): Promise<__esri.F
     const result = await qt.execute(query);
     return result;
   } catch (error) {
-    console.log('error', error);
+    console.error('error', error);
     return [];
   }
 }

@@ -96,7 +96,7 @@ const PlanetBasemap = (props: BaseLayerPlanet): JSX.Element => {
         setPlanetTiles(planetTilesFormat);
         setSelectedPlanetTileLayer(planetTilesFormat[0].value);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.error(e));
   }, []);
 
   function handlePlanetTileChange(name: string): void {

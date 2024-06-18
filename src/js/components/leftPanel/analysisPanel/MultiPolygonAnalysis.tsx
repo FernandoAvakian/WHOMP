@@ -69,7 +69,6 @@ const MultiPolygonAnalysis = ({ initAnalyze }: Props) => {
       setOverlap('idle');
 
       mapController.clearGraphicFromMultiSelection(inputIndex);
-      console.log('clear');
       //because we are removing one of the geometry selections, by definition we wont have any geometries intersecting, so newly drawn intersection graphic needs to go away
       removeIntersectingGraphic();
       deleteMultiPolygonLayer(analysisFeatureList[inputIndex]);
@@ -112,7 +111,6 @@ const MultiPolygonAnalysis = ({ initAnalyze }: Props) => {
         <DeleteButton
           onClick={() => {
             handleClearSingleAnalysis(inputIndex);
-            console.log('del');
           }}
         >
           <DeleteIcon width={18} height={18} fill={'#ec5555'} />

@@ -71,11 +71,6 @@ export default {
   },
   disabledAnalysisModules: [], //'VIIRS_FIRES', 'GLAD_ALERTS', 'TC_LOSS', 'IFL', 'LCC'
   layerPanel: {
-    GROUP_WEBMAP: {
-      order: 8,
-      label: {},
-      layers: [],
-    },
     GROUP_WORLD_HERITAGE: {
       order: 1,
       groupType: 'default',
@@ -159,7 +154,7 @@ export default {
         },
         {
           id: 'TREE_COVER_LOSS',
-          order: 9,
+          order: 10,
           type: 'remoteDataLayer',
           uuid: '2aed67b3-3643-40d3-9c1e-8af9afb5d9e2',
         },
@@ -175,23 +170,6 @@ export default {
           order: 7,
           type: 'remoteDataLayer',
           uuid: '6d316908-92c8-4f95-8598-f2a0c72786af',
-        },
-        {
-          id: 'AIR_QUALITY_CUSTOM',
-          groupId: 'GROUP_NEAR_REAL_TIME',
-          order: 9,
-          type: 'flagship',
-          origin: 'gfw-api',
-          layerType: 'base-tile-layer',
-          uuid: '1a08810f-34a4-4c53-8a37-6782d0ab6dec',
-          label: {
-            en: 'Air Quality (next-day forecast)',
-            fr: 'Qualité de l’air (prévision)',
-          },
-          sublabel: {
-            en: 'Forecasted PM2.5 (µg/m3)',
-            fr: 'Prévision PM2.5 (µg/m³)',
-          },
         },
         {
           id: 'GFSR_3hour_6782',
@@ -212,6 +190,23 @@ export default {
           id: 'SPEI_v1_recent_5336',
           order: 8,
           type: 'arcgis',
+        },
+        {
+          id: 'AIR_QUALITY_CUSTOM',
+          groupId: 'GROUP_NEAR_REAL_TIME',
+          order: 9,
+          type: 'flagship',
+          origin: 'gfw-api',
+          layerType: 'base-tile-layer',
+          uuid: '1a08810f-34a4-4c53-8a37-6782d0ab6dec',
+          label: {
+            en: 'Air Quality (next-day forecast)',
+            fr: 'Qualité de l’air (prévision)',
+          },
+          sublabel: {
+            en: 'Forecasted PM2.5 (µg/m3)',
+            fr: 'Prévision PM2.5 (µg/m³)',
+          },
         },
         {
           id: '18c58bb3d40-layer-18',
@@ -356,6 +351,54 @@ export default {
           type: 'arcgis',
         },
         {
+          // ????
+          id: '18c58c6ee07-layer-42',
+          order: 6,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c5900c801-layer-67',
+          order: 7,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c58cd02d5-layer-49',
+          order: 8,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c58ccc1cb-layer-48',
+          order: 9,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c58cae831-layer-46',
+          order: 10,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c58cae396-layer-45',
+          order: 11,
+          type: 'arcgis',
+        },
+        {
+          // ????
+          id: '18c58c9d49e-layer-44',
+          order: 12,
+          type: 'arcgis',
+        },
+        {
+          // Mangroves
+          id: '18c58c83da9-layer-43',
+          order: 13,
+          type: 'arcgis',
+        },
+        {
           // Terrestrial species richness
           id: '18fe3c6457d-layer-51',
           order: 14,
@@ -403,52 +446,135 @@ export default {
           order: 17,
           type: 'arcgis',
         },
+      ],
+    },
+    GROUP_CLIMATE: {
+      groupType: 'default',
+      order: 5,
+      label: {
+        en: 'Climate',
+        fr: 'Climat',
+        es: 'Clima',
+        pt: 'Clima',
+        id: 'Iklim',
+        zh: '气候',
+        ka: 'კლიმატი',
+        hy: 'Կլիմա',
+        az: 'İqlim',
+        nl: 'Klimaat',
+      },
+      layers: [
         {
-          // ????
-          id: '18c58c6ee07-layer-42',
-          order: 6,
-          type: 'arcgis',
-        },
-        {
-          // ????
-          id: '18c5900c801-layer-67',
+          id: 'FOREST_CARBON_NET_FLUX',
           order: 7,
-          type: 'arcgis',
+          type: 'remoteDataLayer',
+          uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
+          label: {
+            en: 'Forest greenhouse gas emissions / sequestration. ',
+            fr: 'Émissions / séquestration de gaz à effet de serre dans les forêts',
+          },
         },
         {
-          // ????
-          id: '18c58cd02d5-layer-49',
+          id: 'CARBON_SEQ',
           order: 8,
-          type: 'arcgis',
+          type: 'remoteDataLayer',
+          uuid: 'e7208398-0acd-4f73-a824-c4fe1e356e0c',
         },
         {
-          // ????
-          id: '18c58ccc1cb-layer-48',
+          id: 'CORAL_BLEACHING_RISK_CUSTOM',
+          groupId: 'GROUP_CLIMATE',
           order: 9,
-          type: 'arcgis',
+          type: 'flagship',
+          origin: 'gfw-api',
+          layerType: 'base-tile-layer',
+          uuid: '61c8acc0-753a-473d-9b70-b9690497b31f',
+          label: {
+            en: 'Projected Coral Bleaching',
+            fr: 'Blanchiment projeté des coraux',
+          },
+          sublabel: {
+            en: 'Onset year of annual events under the RCP 8.5 scenario',
+            fr: 'Année d’apparition des événements annuels dans le cadre du scénario RCP 8.5',
+          },
         },
         {
-          // ????
-          id: '18c58cae831-layer-46',
+          //  Biomass carbon (above and below ground)
+          id: 'World_Biomass_Carbon_8621',
           order: 10,
           type: 'arcgis',
+          sublabel: {
+            en: 'Darker tones of green = higher levels of carbon storage.',
+            fr: 'Tons de vert plus foncés = niveaux plus élevés de stockage de carbone.',
+          },
         },
         {
-          // ????
-          id: '18c58cae396-layer-45',
+          //  Biomass carbon (above and below ground) FR
+          id: 'World_Biomass_Carbon_1594',
           order: 11,
           type: 'arcgis',
+          sublabel: {
+            en: 'Darker tones of green = higher levels of carbon storage.',
+            fr: 'Tons de vert plus foncés = niveaux plus élevés de stockage de carbone.',
+          },
         },
+        // {
+        //   // ???? Not in map
+        //   id: '18c58d7ee0c-layer-50',
+        //   order: 1,
+        //   type: 'arcgis',
+        // },
         {
-          // ????
-          id: '18c58c9d49e-layer-44',
+          // Sea level trend
+          id: '18c58dcc81e-layer-51',
           order: 12,
           type: 'arcgis',
         },
         {
-          // ????
-          id: '18c58c9d49e-layer-43',
+          // Total annual precipitation
+          id: 'TotalAnnualPrecipitation_6611',
           order: 13,
+          type: 'arcgis',
+        },
+        {
+          // Total annual precipitation FR
+          id: 'TotalAnnualPrecipitation_3229',
+          order: 13,
+          type: 'arcgis',
+        },
+        {
+          // Projected precipitation change by 2050
+          id: 'Change_TempPre2050_9714',
+          order: 15,
+          type: 'arcgis',
+        },
+        {
+          // Projected precipitation change by 2050 FR
+          id: '18ef6f7fa13-layer-37',
+          order: 16,
+          type: 'arcgis',
+        },
+        {
+          // Annual mean temperature
+          id: 'Annual_Temp_6938',
+          order: 17,
+          type: 'arcgis',
+        },
+        {
+          // Annual mean temperature FR
+          id: 'Annual_Temp_7381',
+          order: 18,
+          type: 'arcgis',
+        },
+        {
+          // Projected temperature change by 2050
+          id: 'Change_Temp2050_7022',
+          order: 19,
+          type: 'arcgis',
+        },
+        {
+          // Projected temperature change by 2050 FR
+          id: '18ef6f7b72f-layer-36',
+          order: 19,
           type: 'arcgis',
         },
       ],
@@ -622,124 +748,48 @@ export default {
         },
       ],
     },
-    GROUP_CLIMATE: {
-      groupType: 'default',
-      order: 5,
+    GROUP_WEBMAP: {
+      order: 8,
+      label: {},
+      layers: [],
+    },
+    GROUP_IMAGERY: {
+      groupType: 'imagery',
+      order: 9,
       label: {
-        en: 'Climate',
-        fr: 'Climat',
-        es: 'Clima',
-        pt: 'Clima',
-        id: 'Iklim',
-        zh: '气候',
-        ka: 'კლიმატი',
-        hy: 'Կլիմա',
-        az: 'İqlim',
-        nl: 'Klimaat',
+        en: 'Recent Imagery',
+        fr: 'Imagerie récente',
+        es: 'Recent Imagery',
+        pt: 'Recent Imagery',
+        id: 'Recent Imagery',
+        zh: 'Recent Imagery',
+        ka: 'Recent Imagery',
       },
       layers: [
         {
-          id: 'FOREST_CARBON_NET_FLUX',
-          order: 8,
-          type: 'remoteDataLayer',
-          uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
+          order: 1,
+          id: 'RECENT_IMAGERY',
+          type: 'imagery',
+          technicalName: 'recent_satellite_imagery',
+          visible: false,
           label: {
-            en: 'Forest greenhouse gas emissions / sequestration. ',
-            fr: 'Émissions / séquestration de gaz à effet de serre dans les forêts',
+            en: 'Recent Imagery',
+            fr: 'Imagerie récente',
+            es: 'Recent Imagery',
+            pt: 'Recent Imagery',
+            id: 'Recent Imagery',
+            zh: 'Recent Imagery',
+            ka: 'Recent Imagery',
           },
-        },
-        {
-          id: 'CARBON_SEQ',
-          order: 9,
-          type: 'remoteDataLayer',
-          uuid: 'e7208398-0acd-4f73-a824-c4fe1e356e0c',
-        },
-        {
-          id: 'CORAL_BLEACHING_RISK_CUSTOM',
-          groupId: 'GROUP_CLIMATE',
-          order: 10,
-          type: 'flagship',
-          origin: 'gfw-api',
-          layerType: 'base-tile-layer',
-          uuid: '61c8acc0-753a-473d-9b70-b9690497b31f',
-          label: {
-            en: 'Projected Coral Bleaching',
-            fr: 'Blanchiment projeté des coraux',
+          dynamicSublabel: {
+            en: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            fr: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            es: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            pt: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            id: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            zh: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
+            ka: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
           },
-          sublabel: {
-            en: 'Onset year of annual events under the RCP 8.5 scenario',
-            fr: 'Année d’apparition des événements annuels dans le cadre du scénario RCP 8.5',
-          },
-        },
-        {
-          //  Biomass carbon (above and below ground)
-          id: 'World_Biomass_Carbon_8621',
-          order: 11,
-          type: 'arcgis',
-          sublabel: {
-            en: 'Darker tones of green = higher levels of carbon storage.',
-            fr: 'Tons de vert plus foncés = niveaux plus élevés de stockage de carbone.',
-          },
-        },
-        // {
-        //   // ???? Not in map
-        //   id: '18c58d7ee0c-layer-50',
-        //   order: 1,
-        //   type: 'arcgis',
-        // },
-        {
-          // Sea level trend
-          id: '18c58dcc81e-layer-51',
-          order: 12,
-          type: 'arcgis',
-        },
-        {
-          // Total annual precipitation
-          id: 'TotalAnnualPrecipitation_6611',
-          order: 13,
-          type: 'arcgis',
-        },
-        {
-          // Total annual precipitation FR
-          id: 'TotalAnnualPrecipitation_3229',
-          order: 13,
-          type: 'arcgis',
-        },
-        {
-          // Projected precipitation change by 2050
-          id: 'Change_TempPre2050_9714',
-          order: 15,
-          type: 'arcgis',
-        },
-        {
-          // Projected precipitation change by 2050 FR
-          id: '18ef6f7fa13-layer-37',
-          order: 16,
-          type: 'arcgis',
-        },
-        {
-          // Annual mean temperature
-          id: 'Annual_Temp_6938',
-          order: 17,
-          type: 'arcgis',
-        },
-        {
-          // Annual mean temperature FR
-          id: 'Annual_Temp_738',
-          order: 18,
-          type: 'arcgis',
-        },
-        {
-          // Projected temperature change by 2050
-          id: 'Change_Temp2050_7022',
-          order: 19,
-          type: 'arcgis',
-        },
-        {
-          // Projected temperature change by 2050 FR
-          id: '18ef6f7b72f-layer-36',
-          order: 19,
-          type: 'arcgis',
         },
       ],
     },
@@ -798,46 +848,6 @@ export default {
           id: '18c590528da-layer-68',
           order: 107,
           type: 'arcgis',
-        },
-      ],
-    },
-    GROUP_IMAGERY: {
-      groupType: 'imagery',
-      order: 8,
-      label: {
-        en: 'Recent Imagery',
-        fr: 'Imagerie récente',
-        es: 'Recent Imagery',
-        pt: 'Recent Imagery',
-        id: 'Recent Imagery',
-        zh: 'Recent Imagery',
-        ka: 'Recent Imagery',
-      },
-      layers: [
-        {
-          order: 1,
-          id: 'RECENT_IMAGERY',
-          type: 'imagery',
-          technicalName: 'recent_satellite_imagery',
-          visible: false,
-          label: {
-            en: 'Recent Imagery',
-            fr: 'Imagerie récente',
-            es: 'Recent Imagery',
-            pt: 'Recent Imagery',
-            id: 'Recent Imagery',
-            zh: 'Recent Imagery',
-            ka: 'Recent Imagery',
-          },
-          dynamicSublabel: {
-            en: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            fr: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            es: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            pt: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            id: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            zh: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-            ka: '({DATE_TIME}, {CLOUD_COVERAGE}% cloud coverage, {INSTRUMENT})',
-          },
         },
       ],
     },

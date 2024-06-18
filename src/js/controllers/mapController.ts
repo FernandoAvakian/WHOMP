@@ -455,12 +455,11 @@ export class MapController {
 
             //Reorder layers on the map!
             this._map?.layers.forEach((layer: any) => {
-              const layerIndex = mapLayerIDs!.findIndex((i) => i === layer.id);
+              const layerIndex = mapLayerIDs!.reverse().findIndex((i) => i === layer.id);
               if (layerIndex !== -1) {
                 this._map?.reorder(layer, layerIndex);
               }
             });
-
             // Sort layers on the sidebar
             const reorderedLayers = allLayerObjects.sort((a, b) => {
               return mapLayerIDs!.indexOf(a.id) - mapLayerIDs!.indexOf(b.id);
@@ -705,7 +704,7 @@ export class MapController {
 
       //Reorder layers on the map!
       this._map?.layers.forEach((layer: any) => {
-        const layerIndex = mapLayerIDs?.findIndex((i) => i === layer.id);
+        const layerIndex = mapLayerIDs?.reverse().findIndex((i) => i === layer.id);
         if (layerIndex && layerIndex !== -1) {
           this._map?.reorder(layer, layerIndex);
         }

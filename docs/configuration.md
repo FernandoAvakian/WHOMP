@@ -67,7 +67,7 @@ Properties for the groups and layers are described in detail in the resources fi
       - Group 2 - order 2
         - Layer B - order 1
     - `id` - Unique ID for the layer, this must be unique across the whole app, not just the group
-    - `type` - Type of layer. Currently `tiled`, `webtiled`, `image`, `dynamic`, `feature`, `graphic`, `glad`, and `terra` are supported types.
+    - `type` - Type of layer. Currently `tiled`, `webtiled`, `image`, `dynamic`, `feature`, `graphic`, `glad`, and `terra` are supported types. Also for source specific we have `remoteDataLayer`: GFW PRODUCTION API (production-api.globalforestwatch), `arcgis`: for webmap layers coming from Esri, and `flagship` GFW metadata layers coming from Resource Watch API (api.resourcewatch.org)
     - `visible` - default layer visibility. Default value if not supplied is false.
     - `url` - required for all layers except graphics layers.
     - `technicalName` - key for this layer to retrieve metadata about it from the GFW metadata API

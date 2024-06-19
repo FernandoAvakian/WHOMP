@@ -802,12 +802,6 @@ export default {
       },
       layers: [
         {
-          // White background
-          id: '18ec2e2d84a-layer-42',
-          order: 9,
-          type: 'arcgis',
-        },
-        {
           // Dark Gray Canvas
           id: '18c59090835-layer-73',
           order: 10,
@@ -835,6 +829,12 @@ export default {
           // White background FR
           id: '18ec2e49a69-layer-38',
           order: 15,
+          type: 'arcgis',
+        },
+        {
+          // White background
+          id: '18ec2e2d84a-layer-42',
+          order: 16,
           type: 'arcgis',
         },
         {

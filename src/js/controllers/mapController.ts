@@ -462,7 +462,7 @@ export class MapController {
             });
             // Sort layers on the sidebar
             const reorderedLayers = allLayerObjects.sort((a, b) => {
-              return mapLayerIDs!.indexOf(a.id) - mapLayerIDs!.indexOf(b.id);
+              return mapLayerIDs!.indexOf(b.id) - mapLayerIDs!.indexOf(a.id);
             });
 
             store.dispatch(allAvailableLayers(reorderedLayers));
@@ -592,7 +592,7 @@ export class MapController {
       store.dispatch(changeMapScale(mapview.scale));
     }
 
-    const throtthledUpdater = debounce(syncExtent, 1500, { trailing: true });
+    const throttledUpdater = debounce(syncExtent, 1500, { trailing: true });
 
     this._mapview?.when(async () => {
       if (!this._mapview) return;
@@ -608,7 +608,7 @@ export class MapController {
       store.dispatch(changeMapCenterCoordinates({ latitude, longitude }));
       this._mapview!.watch('extent', (newExtent) => {
         if (!this._mapview) return;
-        throtthledUpdater(newExtent, this._mapview);
+        throttledUpdater(newExtent, this._mapview);
       });
       this._mapview!.on('click', (event) => {
         store.dispatch(setActiveFeatures([]));
@@ -686,6 +686,8 @@ export class MapController {
         }
       });
 
+      store.dispatch<SetIsLoadingAction>(setIsLoading(true));
+
       const mapLayerObjects: LayerProps[] = await extractWebmapLayerObjects(this._map);
 
       //Update the layer objects with new titles based on current language
@@ -698,24 +700,25 @@ export class MapController {
       //@ts-ignore
       this._map?.addMany(esriNonWebmapLayers);
       const allLayerObjects = [...updatedLayerObjects, ...mapLayerObjects];
-      const mapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map);
+      const mapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map)?.reverse();
 
       this.addExtraLayers();
 
       //Reorder layers on the map!
-      this._map?.layers.forEach((layer: any) => {
-        const layerIndex = mapLayerIDs?.reverse().findIndex((i) => i === layer.id);
-        if (layerIndex && layerIndex !== -1) {
-          this._map?.reorder(layer, layerIndex);
-        }
-      });
+      // this._map?.layers.forEach((layer: any) => {
+      //   const layerIndex = mapLayerIDs?.findIndex((i) => i === layer.id);
+      //   if (layerIndex && layerIndex !== -1) {
+      //     this._map?.reorder(layer, layerIndex);
+      //   }
+      // });
 
       // Sort layers on the sidebar
       const reorderedLayers = allLayerObjects.sort((a, b) => {
-        return mapLayerIDs!.indexOf(a.id) - mapLayerIDs!.indexOf(b.id);
+        return mapLayerIDs!.indexOf(b.id) - mapLayerIDs!.indexOf(a.id);
       });
       store.dispatch(allAvailableLayers(reorderedLayers));
 
+      store.dispatch<SetIsLoadingAction>(setIsLoading(false));
       this.initializeAndSetSketch();
     });
   }

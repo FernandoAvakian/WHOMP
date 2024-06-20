@@ -235,7 +235,7 @@ const LeftPanel = (): React.ReactElement => {
       data-cy="left-panel"
     >
       <div
-        className={clsx('flex flex-col w-[342px] grow bg-white transition-all duration-150 overflow-y-auto', {
+        className={clsx('flex flex-col w-[392px] grow bg-white transition-all duration-150 overflow-y-auto', {
           'opacity-0 -translate-x-full': !isShowing,
           'opacity-100 translate-x-0': isShowing,
         })}

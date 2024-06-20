@@ -605,6 +605,12 @@ export default {
           },
         },
         {
+          id: 'UMD_LAND_COVER',
+          order: 10,
+          type: 'remoteDataLayer',
+          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89',
+        },
+        {
           id: 'WIND_SPEED',
           order: 11,
           type: 'remoteDataLayer',
@@ -613,12 +619,6 @@ export default {
             en: 'Wind speed potential at 50m (m/s)',
             fr: 'Vitesse potentielle du vent à 50 m (m/s)',
           },
-        },
-        {
-          id: 'UMD_LAND_COVER',
-          order: 10,
-          type: 'remoteDataLayer',
-          uuid: 'f22e0529-d398-4ccc-b943-e62d420fea89',
         },
         {
           id: 'WATER_STRESS_CUSTOM',
@@ -802,53 +802,53 @@ export default {
       },
       layers: [
         {
+          // Light Gray Canvas
+          id: '18c590636fa-layer-69',
+          order: 14,
+          type: 'arcgis',
+        },
+        {
           // Dark Gray Canvas
           id: '18c59090835-layer-73',
-          order: 10,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Topographic
           id: '18c5907c5ac-layer-71',
-          order: 11,
+          order: 16,
           type: 'arcgis',
         },
         {
           // Streets
           id: '18c5906db15-layer-70',
-          order: 12,
-          type: 'arcgis',
-        },
-        {
-          // Light Gray Canvas
-          id: '18c590636fa-layer-69',
-          order: 13,
+          order: 17,
           type: 'arcgis',
         },
         {
           // White background FR
           id: '18ec2e49a69-layer-38',
-          order: 15,
+          order: 18,
           type: 'arcgis',
         },
         {
           // White background
           id: '18ec2e2d84a-layer-42',
-          order: 16,
+          order: 19,
           type: 'arcgis',
         },
-        {
-          // ????
-          id: '18c590868ad-layer-72',
-          order: 106,
-          type: 'arcgis',
-        },
-        {
-          // ????
-          id: '18c590528da-layer-68',
-          order: 107,
-          type: 'arcgis',
-        },
+        // {
+        //   // ????
+        //   id: '18c590868ad-layer-72',
+        //   order: 20,
+        //   type: 'arcgis',
+        // },
+        // {
+        //   // ????
+        //   id: '18c590528da-layer-68',
+        //   order: 21,
+        //   type: 'arcgis',
+        // },
       ],
     },
     GROUP_BASEMAP: {

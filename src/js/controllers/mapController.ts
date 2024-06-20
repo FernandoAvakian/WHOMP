@@ -407,7 +407,6 @@ export class MapController {
             //Sync esri map visibility
             this.syncWebmapLayersWithURL(layerInfosFromURL);
           }
-
           store.dispatch(allAvailableLayers(allLayerObjects));
           const esriRemoteLayersPromises: any = remoteLayerObjects.map((layerObject) => {
             return LayerFactory(this._mapview, layerObject);
@@ -447,22 +446,23 @@ export class MapController {
                 }
               });
             }
-
             this._map?.addMany(allLayers);
 
             //Retrieve sorted layer array
             const mapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map);
-
+            const reversedMapLayerIDs = mapLayerIDs?.concat().reverse();
             //Reorder layers on the map!
             this._map?.layers.forEach((layer: any) => {
-              const layerIndex = mapLayerIDs!.reverse().findIndex((i) => i === layer.id);
+              const layerIndex = reversedMapLayerIDs!.findIndex((i) => i === layer.id);
+
               if (layerIndex !== -1) {
                 this._map?.reorder(layer, layerIndex);
               }
             });
+
             // Sort layers on the sidebar
             const reorderedLayers = allLayerObjects.sort((a, b) => {
-              return mapLayerIDs!.indexOf(b.id) - mapLayerIDs!.indexOf(a.id);
+              return reversedMapLayerIDs!.indexOf(b.id) - reversedMapLayerIDs!.indexOf(a.id);
             });
 
             store.dispatch(allAvailableLayers(reorderedLayers));
@@ -700,21 +700,23 @@ export class MapController {
       //@ts-ignore
       this._map?.addMany(esriNonWebmapLayers);
       const allLayerObjects = [...updatedLayerObjects, ...mapLayerObjects];
-      const mapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map)?.reverse();
+      const reversedMapLayerIDs = getSortedLayers(appSettings.layerPanel, allLayerObjects, this._map)
+        ?.concat()
+        .reverse();
 
       this.addExtraLayers();
 
-      //Reorder layers on the map!
-      // this._map?.layers.forEach((layer: any) => {
-      //   const layerIndex = mapLayerIDs?.findIndex((i) => i === layer.id);
-      //   if (layerIndex && layerIndex !== -1) {
-      //     this._map?.reorder(layer, layerIndex);
-      //   }
-      // });
+      // Reorder layers on the map!
+      this._map?.layers.forEach((layer: any) => {
+        const layerIndex = reversedMapLayerIDs?.findIndex((i) => i === layer.id);
+        if (layerIndex && layerIndex !== -1) {
+          this._map?.reorder(layer, layerIndex);
+        }
+      });
 
       // Sort layers on the sidebar
       const reorderedLayers = allLayerObjects.sort((a, b) => {
-        return mapLayerIDs!.indexOf(b.id) - mapLayerIDs!.indexOf(a.id);
+        return reversedMapLayerIDs!.indexOf(b.id) - reversedMapLayerIDs!.indexOf(a.id);
       });
       store.dispatch(allAvailableLayers(reorderedLayers));
 

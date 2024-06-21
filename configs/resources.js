@@ -94,6 +94,11 @@ export default {
           order: 3,
           type: 'arcgis',
         },
+        {
+          id: 'Biorphere_Reserve__points__6751'
+          order: 4,
+          type: 'arcgis',
+        },
       ],
     },
     GROUP_NEAR_REAL_TIME: {

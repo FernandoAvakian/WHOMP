@@ -99,6 +99,11 @@ export default {
           order: 4,
           type: 'arcgis',
         },
+        {
+          id: '19030fdbe22-layer-40',
+          order: 5,
+          type: 'arcgis',
+        },
       ],
     },
     GROUP_NEAR_REAL_TIME: {

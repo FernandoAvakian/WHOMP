@@ -95,7 +95,7 @@ export default {
           type: 'arcgis',
         },
         {
-          id: 'Biorphere_Reserve__points__6751'
+          id: 'Biorphere_Reserve__points__6751',
           order: 4,
           type: 'arcgis',
         },

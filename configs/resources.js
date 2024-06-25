@@ -104,6 +104,11 @@ export default {
           order: 5,
           type: 'arcgis',
         },
+        {
+          id: 'UNESCO_Geoparks_5830',
+          order: 6,
+          type: 'arcgis',
+        },
       ],
     },
     GROUP_NEAR_REAL_TIME: {

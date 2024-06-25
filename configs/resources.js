@@ -107,12 +107,12 @@ export default {
         {
           id: 'UNESCO_Geoparks_2369',
           order: 6,
-          type: 'arcgis',
+          type: 'ArcGISFeatureLayer',
         }
         {
           id: 'UNESCO_Geoparks_5830',
           order: 7,
-          type: 'arcgis',
+          type: 'ArcGISFeatureLayer',
         }
       ],
     },

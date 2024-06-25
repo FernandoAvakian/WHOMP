@@ -104,16 +104,6 @@ export default {
           order: 5,
           type: 'arcgis',
         },
-        {
-          id: 'UNESCO_Geoparks_2369',
-          order: 6,
-          type: 'ArcGISFeatureLayer',
-        }
-        {
-          id: 'UNESCO_Geoparks_5830',
-          order: 7,
-          type: 'ArcGISFeatureLayer',
-        }
       ],
     },
     GROUP_NEAR_REAL_TIME: {

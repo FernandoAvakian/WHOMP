@@ -80,7 +80,7 @@ export default {
       },
       layers: [
         {
-          id: '18c58986620-layer-2',
+          id: '18c58986623-layer-4',
           order: 1,
           type: 'arcgis',
         },
@@ -90,7 +90,7 @@ export default {
           type: 'arcgis',
         },
         {
-          id: '18c58986623-layer-4',
+          id: '18c58986620-layer-2',
           order: 3,
           type: 'arcgis',
         },

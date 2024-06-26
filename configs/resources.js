@@ -109,9 +109,45 @@ export default {
           order: 6,
           type: 'arcgis',
         },
+        
+        {
+          id: 'Biosphere_Reserves_core_zones_5709',
+          order: 7,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_core_zones_4517',
+          order: 8,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_buffer_zones_3999',
+          order: 9,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_buffer_zones_3999',
+          order: 10,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_buffer_zones_6834',
+          order: 11,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_transition_zones_5814',
+          order: 12,
+          type: 'arcgis',
+        },
+        {
+          id: 'Biosphere_Reserves_transition_zones_8545',
+          order: 13,
+          type: 'arcgis',
+        },
         {
           id: 'UNESCO_Geoparks_2369',
-          order: 7,
+          order: 14,
           type: 'arcgis',
         },
       ],

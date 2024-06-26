@@ -140,8 +140,13 @@ export default {
           type: 'arcgis',
         },
         {
-          id: 'UNESCO_Geoparks_2369',
+          id: 'UNESCO_Geoparks_5830',
           order: 13,
+          type: 'arcgis',
+        },
+        {
+          id: 'UNESCO_Geoparks_2369',
+          order: 14,
           type: 'arcgis',
         },
       ],

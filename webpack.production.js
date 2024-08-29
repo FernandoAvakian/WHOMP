@@ -24,6 +24,13 @@ module.exports = merge(common, {
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 20,
     }),
+    
+    new webpack.DefinePlugin({
+        'process.env': {
+          REACT_APP_PLANET_API_KEY: JSON.stringify(process.env.REACT_APP_PLANET_API_KEY),
+          REACT_APP_GFW_DATA_API_KEY: JSON.stringify(process.env.REACT_APP_GFW_DATA_API_KEY),
+        },
+      }),
     new CompressionPlugin(),
   ],
     new webpack.DefinePlugin({

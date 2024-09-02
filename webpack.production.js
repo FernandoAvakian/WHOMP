@@ -27,9 +27,9 @@ module.exports = merge(common, {
     new CompressionPlugin(),
   ],
     new webpack.DefinePlugin({
-      'process.env': {
-        REACT_APP_PLANET_API_KEY: JSON.stringify(process.env.REACT_APP_PLANET_API_KEY),
-        REACT_APP_GFW_DATA_API_KEY: JSON.stringify(process.env.REACT_APP_GFW_DATA_API_KEY),
+    'process.env': {
+      REACT_APP_PLANET_API_KEY: JSON.stringify(process.env.REACT_APP_PLANET_API_KEY),
+      REACT_APP_GFW_DATA_API_KEY: JSON.stringify(process.env.REACT_APP_GFW_DATA_API_KEY),
     },
   }),
 });

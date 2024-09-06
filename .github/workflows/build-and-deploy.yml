@@ -21,7 +21,7 @@ jobs:
       - name: Install and Build 🔧
         env:
           REACT_APP_PLANET_API_KEY: ${{ secrets.REACT_APP_PLANET_API_KEY }}
-          REACT_APP_GFW_DATA_API_KEY: 7abb4a7b-646f-4a9f-8ee6-48d76c37782c
+          REACT_APP_GFW_DATA_API_KEY: ${{ secrets.REACT_APP_GFW_DATA_API_KEY }}
         run: |
           yarn install
           yarn build

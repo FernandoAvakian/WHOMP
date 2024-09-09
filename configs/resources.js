@@ -262,6 +262,11 @@ export default {
             en: 'Forecasted PM2.5 (µg/m3)',
             fr: 'Prévision PM2.5 (µg/m³)',
           },
+          {
+            id: 'GlobalWaterModel_Medium_1433',
+            order: 10,
+            type: 'arcgis',
+          },
         },
         {
           id: '18c58bb3d40-layer-18',

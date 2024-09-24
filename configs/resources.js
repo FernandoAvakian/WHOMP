@@ -353,6 +353,11 @@ export default {
           order: 31,
           type: 'arcgis',
         },
+        {
+          id: 'GlobalWaterModel_Medium_5944',
+          order: 33,
+          type: 'arcgis',
+        },
       ],
     },
     GROUP_PROTECTION_AND_MANAGEMENT: {

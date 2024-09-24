@@ -383,11 +383,6 @@ export default {
           order: 4,
           type: 'arcgis',
         },
-        {
-          id: 'GlobalWaterModel_Medium_5944',
-          order: 5,
-          type: 'arcgis',
-        },
       ],
     },
     GROUP_NATURAL_VALUES: {

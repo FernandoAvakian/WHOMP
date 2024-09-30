@@ -394,18 +394,6 @@ export default {
       },
       layers: [
         {
-          // Glaciated Areas
-          id: 'Glaciated_Areas_3800',
-          order: 1,
-          origin: 'arcgis',
-        },
-        {
-          // Glaciated Areas FR
-          id: 'Glaciated_Areas_6249',
-          order: 1,
-          type: 'arcgis',
-        },
-        {
           // ????
           id: '18c58c6ee07-layer-42',
           order: 6,
@@ -448,59 +436,65 @@ export default {
           type: 'arcgis',
         },
         {
-          // Mangroves
-          id: '18c58c83da9-layer-43',
-          order: 13,
-          type: 'arcgis',
-        },
-        {
           // Terrestrial species richness
           id: '18fe3c6457d-layer-51',
-          order: 14,
+          order: 13,
           type: 'arcgis',
         },
         {
           // Terrestrial species richness FR
           id: 'Terrestrial_species_richness_3076',
-          order: 14,
+          order: 13,
           type: 'arcgis',
         },
         {
           // Terrestrial threatened species
           id: '18fe3adc785-layer-51',
-          order: 15,
+          order: 14,
           type: 'arcgis',
         },
         {
           // Terrestrial threatened species FR
           id: '18fe3b519f4-layer-40',
-          order: 15,
+          order: 14,
           type: 'arcgis',
         },
         {
           // Marine species richness
           id: '18fe2b070c6-layer-51',
-          order: 16,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Marine species richness FR
           id: 'OBIS_Marine_biodiversity_richness_6349',
-          order: 16,
+          order: 15,
           type: 'arcgis',
         },
         {
           // Marine threatened species
           id: 'OBIS_Marine_biodiversity_richness_5696',
-          order: 17,
+          order: 16,
           type: 'arcgis',
         },
         {
           // Marine threatened species FR
           id: '18fe792a926-layer-41',
+          order: 16,
+          type: 'arcgis',
+        },
+        {
+          // Ecoregions and biomes
+          id: 'Resolve_Ecoregions_9734',
           order: 17,
           type: 'arcgis',
         },
+        {
+          // Ecoregions and biomes FR
+          id: 'Resolve_Ecoregions_1170',
+          order: 17,
+          type: 'arcgis',
+        },        
       ],
     },
     GROUP_CLIMATE: {

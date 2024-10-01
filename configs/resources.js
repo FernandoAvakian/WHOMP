@@ -519,7 +519,7 @@ export default {
           type: 'remoteDataLayer',
           uuid: 'bd768c4b-f5f8-47f9-b6a0-5bb6078f0fac',
           label: {
-            en: 'Forest greenhouse gas emissions / sequestration. ',
+            en: 'Forest greenhouse gas emissions / sequestration ',
             fr: 'Émissions / séquestration de gaz à effet de serre dans les forêts',
           },
         },

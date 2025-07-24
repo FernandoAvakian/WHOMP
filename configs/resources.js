@@ -154,6 +154,11 @@ export default {
           order: 15,
           type: 'arcgis',
         },
+        {
+          id: '19813869fbe-layer-53',
+          order: 16,
+          type: 'arcgis',
+        },
       ],
     },
     GROUP_NEAR_REAL_TIME: {

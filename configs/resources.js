@@ -165,8 +165,8 @@ export default {
       order: 2,
       groupType: 'default',
       label: {
-        en: 'Datasets for analysis',
-        fr: 'Ensembles de données pour analyse',
+        en: 'Datasets for analysis (time-enabled)',
+        fr: 'Ensembles de données pour analyse (avec suivi temporel)',
       },
       layers: [
         {

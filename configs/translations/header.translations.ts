@@ -221,9 +221,9 @@ export const bannerContent = {
 
 export const datasetBannerContent = {
   en: {
-    text: 'This tab is a beta release: some datasets may take longer to load and some legends may not display properly',
+    text: 'This tab is a beta release: some datasets may not display properly and some controls may be buggy',
   },
   fr: {
-    text: "Cet onglet est une version bêta : la visualisation de certains ensembles de données peut prendre plus de temps et certaines légendes peuvent ne pas s'afficher correctement",
+    text: "Cet onglet est une version bêta : certains jeux de données peuvent mal s’afficher et certaines commandes peuvent être instables.",
   },
 };

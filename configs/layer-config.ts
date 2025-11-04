@@ -4,11 +4,7 @@ export const supportedLayers = [
   'loss',
   'tree-mosaic',
   'tropical-tree-cover',
-  'forest-carbon-gross-removals',
-  'forest-carbon-gross-emissions',
-  'forest-carbon-net-flux',
   'umd-land-cover',
-  'gain',
   'image',
   'webtiled',
   'tiled',
@@ -31,10 +27,7 @@ export const densityEnabledLayers = [
   'TREE_COVER',
   'TREES_MOSAIC_LANDSCAPES',
   'TROPICAL_TREE_COVER',
-  'FOREST_CARBON_GROSS_REMOVALS',
-  'FOREST_CARBON_GROSS_EMISSIONS',
-  'FOREST_CARBON_NET_FLUX',
-];
+ ];
 
 export const landsatBaselayerURL =
   'https://production-api.globalforestwatch.org/v2/landsat-tiles/2017/{level}/{col}/{row}';

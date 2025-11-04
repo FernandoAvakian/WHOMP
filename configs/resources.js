@@ -328,7 +328,6 @@ export default {
         },
       ],
     },
-    },
     GROUP_WEBMAP: {
       order: 8,
       label: {},

@@ -408,7 +408,7 @@ export const layersPanelTranslations = {
     tabTitle: '1. Visualize',
     layers: 'Layers',
     description:
-      'Select the datasets to visualize on the map. Metadata and a guidance to interpret layers are available <a href="https://whc.unesco.org/uploads/activities/documents/activity-1142-19.pdf" target="_blank">here</a>.',
+      'Select datasets below to visualize and subsequently analyze in the Analysis tab',
     selectAll: 'Select All',
     clearAll: 'Clear All',
     legend: 'Legend',
@@ -435,7 +435,7 @@ export const layersPanelTranslations = {
     tabTitle: '1. Visualizer',
     layers: 'Couches',
     description:
-      'Sélectionnez les ensembles de données à visualiser sur la carte. Les métadonnées et un guide d\'interprétation des couches sont disponibles <a href="https://whc.unesco.org/uploads/activities/documents/activity-1142-19.pdf">ici</a>.',
+      'Sélectionnez les jeux de données ci-dessous à visualiser et à analyser ensuite via l’onglet Analyse.',
     selectAll: 'Tout sélectionner',
     clearAll: 'Tout effacer',
     legend: 'Légende',

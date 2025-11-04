@@ -408,7 +408,7 @@ export const layersPanelTranslations = {
     tabTitle: '1. Visualize',
     layers: 'Layers',
     description:
-      'Select datasets below to visualize and subsequently analyze in the Analysis tab',
+      'Select datasets below to visualize and subsequently analyze via the Analysis tab',
     selectAll: 'Select All',
     clearAll: 'Clear All',
     legend: 'Legend',

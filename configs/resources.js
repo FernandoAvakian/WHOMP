@@ -80,21 +80,25 @@ export default {
       },
       layers: [
         {
+          // WH points EN
           id: '19832b9bd05-layer-56',
           order: 1,
           type: 'arcgis',
         },
         {
+          // WH boundaries EN
           id: '19832b9bd04-layer-55',
           order: 2,
           type: 'arcgis',
         },
         {
+          //WH BZ EN
           id: '19832b9bd03-layer-54',
           order: 3,
           type: 'arcgis',
         },
         {
+          //Zones tampon WH FR
           id: '18c58986620-layer-2',
           order: 4,
           type: 'arcgis',

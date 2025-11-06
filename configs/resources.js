@@ -19,7 +19,7 @@ export default {
   language: 'en',
   useAlternativeLanguage: true,
   alternativeWebmap: 'a180fa4dbd154ce28f39bc1ac72a557f',
-  alternativeLanguage: 'fr',
+  alternativeLanguage: '',
   alternativeLanguageTitle: 'Plateforme de cartes en ligne du patrimoine mondial',
   alternativeLanguageSubtitle: '',
   alternativeMapThemes: '',

@@ -309,12 +309,12 @@ export default {
           type: 'arcgis',
         },
         {
-          id: '18c58bd4502-layer-34',
+          id: '18c58bd4502-layer-35',
           order: 3,
           type: 'arcgis',
         },
         {
-          id: '18c58bd4502-layer-35',
+          id: '18c58bd4502-layer-34',
           order: 4,
           type: 'arcgis',
         },

@@ -92,7 +92,6 @@ export default {
           type: 'arcgis',
         },
         {
-          //WH BZ EN
           id: '19832b9bd03-layer-54',
           order: 3,
           type: 'arcgis',

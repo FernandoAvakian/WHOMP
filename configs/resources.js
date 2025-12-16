@@ -91,16 +91,6 @@ export default {
           order: 2,
           type: 'arcgis',
         },
-        {
-          id: '19a91dbcabb-layer-32',
-          order: 3,
-          type: 'arcgis',
-        },
-        {
-          //Zones tampon WH FR
-          id: '18c58986620-layer-2',
-          order: 4,
-          type: 'arcgis',
         },
         {
           id: 'Biorphere_Reserve__points__6751',

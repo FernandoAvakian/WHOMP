@@ -92,13 +92,13 @@ export default {
           type: 'arcgis',
         },
         {
-          id: '19a91dbcabb-layer-32',
+          id: '18c58986620-layer-2',
           order: 3,
           type: 'arcgis',
         },
         {
           //Zones tampon WH FR
-          id: '18c58986620-layer-2',
+          id: '19a91dbcabb-layer-32',
           order: 4,
           type: 'arcgis',
         },

@@ -92,7 +92,7 @@ export default {
           type: 'arcgis',
         },
         {
-          id: '18c58986620-layer-2',
+          id: '19d962de650-layer-37',
           order: 3,
           type: 'arcgis',
         },

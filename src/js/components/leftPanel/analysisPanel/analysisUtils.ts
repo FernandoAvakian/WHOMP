@@ -127,6 +127,6 @@ export function generateWidgetURL({
   if (analysisId === 'LCC' || analysisId === 'TC_GAIN_TOTAL') {
     baseURL = baseURL.concat(`&sql=${sqlString}`);
   }
-  const key = '99c5a4c2-034d-43f5-bd01-87fe5c5026bb'
+  const key = 'efb3b335-3050-4a66-be4c-a7b2c6296867'
   return `${baseURL}&x-api-key=${key}`;
 }

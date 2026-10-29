@@ -1,6 +1,6 @@
 export default {
   webmap: '0e163aaf5a15423a94ebfa1945dfc328',
-  title: 'World Heritage Online Map Platform',
+  title: 'UNESCO Sites Navigator - Analysis',
   subtitle: '',
   logoUrl: '',
   logoLinkUrl: '',
@@ -20,7 +20,7 @@ export default {
   useAlternativeLanguage: true,
   alternativeWebmap: 'a180fa4dbd154ce28f39bc1ac72a557f',
   alternativeLanguage: '',
-  alternativeLanguageTitle: 'Plateforme de cartes du patrimoine mondial',
+  alternativeLanguageTitle: 'Navigateur des sites de l'UNESCO - analyses',
   alternativeLanguageSubtitle: '',
   alternativeMapThemes: '',
   alternativeNarrative: '',
@@ -93,7 +93,7 @@ export default {
         },
         {
           // WH buffer zones EN
-          id: '1a187e86a47-layer-33',
+          id: '1a188506575-layer-32',
           order: 3,
           type: 'arcgis',
         },

@@ -1,6 +1,6 @@
 export default {
   webmap: '0e163aaf5a15423a94ebfa1945dfc328',
-  title: 'World Heritage Online Map Platform',
+  title: 'UNESCO Sites Navigator',
   subtitle: '',
   logoUrl: '',
   logoLinkUrl: '',
@@ -20,11 +20,11 @@ export default {
   useAlternativeLanguage: true,
   alternativeWebmap: 'a180fa4dbd154ce28f39bc1ac72a557f',
   alternativeLanguage: '',
-  alternativeLanguageTitle: 'Plateforme de cartes en ligne du patrimoine mondial',
+  alternativeLanguageTitle: 'Navigateur des sites de l'UNESCO',
   alternativeLanguageSubtitle: '',
   alternativeMapThemes: '',
   alternativeNarrative: '',
-  alternativeWebmapMenuName: 'Custom layers',
+  alternativeWebmapMenuName: 'Other layers',
   initialExtent: {
     x: null,
     y: null,
@@ -58,7 +58,7 @@ export default {
   drySpells: true,
   airQuality: true,
   windSpeed: true,
-  webmapMenuName: 'Custom Layers',
+  webmapMenuName: 'COther layers',
   sharinghost: 'https://www.arcgis.com',
   analyticsCode: '',
   includeCartoTemplateLayers: false,
@@ -92,7 +92,8 @@ export default {
           type: 'arcgis',
         },
         {
-          id: '19d962de650-layer-37',
+          // WH buffer zones EN
+          id: '1a187e86a47-layer-33',
           order: 3,
           type: 'arcgis',
         },

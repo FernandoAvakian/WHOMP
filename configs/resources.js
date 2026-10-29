@@ -103,7 +103,7 @@ export default {
           type: 'arcgis',
         },
         {
-          id: 'Biosphere_Reserves_core_zones_4517',
+          id: '19b274c8d79-layer-31',
           order: 5,
           type: 'arcgis',
         },

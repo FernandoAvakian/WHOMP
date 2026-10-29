@@ -93,7 +93,7 @@ export default {
         },
         {
           // WH buffer zones EN
-          id: '1a188506575-layer-32',
+          id: '1a187e86a47-layer-33',
           order: 3,
           type: 'arcgis',
         },

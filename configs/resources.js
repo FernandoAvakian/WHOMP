@@ -86,6 +86,12 @@ export default {
           type: 'arcgis',
         },
         {
+          // WH BZ EN
+          id: '1a187e86a47-layer-33',
+          order: 3,
+          type: 'arcgis',
+        },
+        {
           // WH boundaries EN
           id: '19832b9bd04-layer-55',
           order: 2,

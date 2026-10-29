@@ -101,6 +101,7 @@ export default {
           id: 'Biorphere_Reserve__points__6751',
           order: 4,
           type: 'arcgis',
+        },
         {
           id: 'Biosphere_Reserves_core_zones_4517',
           order: 5,

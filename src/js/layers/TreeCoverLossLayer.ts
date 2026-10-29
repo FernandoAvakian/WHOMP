@@ -39,7 +39,7 @@ export const createTCL = async () => {
     properties: {
       threshold: 30,
       minYear: 2001,
-      maxYear: 2022, //config.latestTreeCoverLossYearFC
+      maxYear: 2025, //config.latestTreeCoverLossYearFC
     },
 
     getTileUrl: function (level: number, row: number, column: number) {

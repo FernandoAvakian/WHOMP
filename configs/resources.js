@@ -1,6 +1,6 @@
 export default {
   webmap: '0e163aaf5a15423a94ebfa1945dfc328',
-  title: 'UNESCO Sites Navigator - Analysis',
+  title: 'World Heritage Online Map Platform',
   subtitle: '',
   logoUrl: '',
   logoLinkUrl: '',
@@ -20,7 +20,7 @@ export default {
   useAlternativeLanguage: true,
   alternativeWebmap: 'a180fa4dbd154ce28f39bc1ac72a557f',
   alternativeLanguage: '',
-  alternativeLanguageTitle: 'Navigateur des sites de l'UNESCO - analyses',
+  alternativeLanguageTitle: 'Plateforme de cartes en ligne du patrimoine mondial',
   alternativeLanguageSubtitle: '',
   alternativeMapThemes: '',
   alternativeNarrative: '',

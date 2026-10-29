@@ -75,7 +75,7 @@ export default {
       order: 1,
       groupType: 'default',
       label: {
-        en: 'UNESCO designated sites test',
+        en: 'UNESCO designated sites',
         fr: "Sites désignés par l'UNESCO",
       },
       layers: [
@@ -88,79 +88,47 @@ export default {
         {
           // WH boundaries EN
           id: '19832b9bd04-layer-55',
-          order: 3,
+          order: 2,
           type: 'arcgis',
         },
         {
           // WH buffer zones EN
           id: '1a187e86a47-layer-33',
-          order: 2,
-          type: 'arcgis',
-        },
-        {
-          //Zones tampon WH FR
-          id: '19a91dbcabb-layer-32',
-          order: 4,
+          order: 3,
           type: 'arcgis',
         },
         {
           id: 'Biorphere_Reserve__points__6751',
+          order: 4,
+          type: 'arcgis',
+        {
+          id: 'Biosphere_Reserves_core_zones_4517',
           order: 5,
           type: 'arcgis',
         },
         {
-          id: '19030fdbe22-layer-40',
+          id: 'Biosphere_Reserves_buffer_zones_3999',
           order: 6,
           type: 'arcgis',
         },
         {
-          id: '19b274c8d79-layer-31',
+          id: 'Biosphere_Reserves_transition_zones_5814',
           order: 7,
           type: 'arcgis',
         },
         {
-          id: 'Biosphere_Reserves_core_zones_4517',
+          id: 'UNESCO_Geoparks_5830',
           order: 8,
           type: 'arcgis',
         },
         {
-          id: 'Biosphere_Reserves_buffer_zones_3999',
+          id: '198136b13dc-layer-52',
           order: 9,
           type: 'arcgis',
         },
         {
-          id: 'Biosphere_Reserves_buffer_zones_3999',
-          order: 10,
-          type: 'arcgis',
-        },
-        {
-          id: 'Biosphere_Reserves_buffer_zones_6834',
-          order: 11,
-          type: 'arcgis',
-        },
-        {
-          id: 'Biosphere_Reserves_transition_zones_5814',
-          order: 12,
-          type: 'arcgis',
-        },
-        {
-          id: 'Biosphere_Reserves_transition_zones_8545',
-          order: 13,
-          type: 'arcgis',
-        },
-        {
-          id: 'UNESCO_Geoparks_5830',
-          order: 14,
-          type: 'arcgis',
-        },
-        {
-          id: '198136b13dc-layer-52',
-          order: 15,
-          type: 'arcgis',
-        },
-        {
           id: '19813869fbe-layer-53',
-          order: 16,
+          order: 10,
           type: 'arcgis',
         },
       ],
